@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C7B2D023CFB4992E402C198 /* libPods-MMMobileMoodleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 495F6A4DEB1DBE4BAB04C893 /* libPods-MMMobileMoodleTests.a */; };
+		AF6201C41922F345133C558D /* libPods-MMMobileMoodleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 604981798DB5C4D9E28BD7FE /* libPods-MMMobileMoodleUITests.a */; };
 		C53B67A51E0424C800E71274 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C53B67A41E0424C800E71274 /* main.m */; };
 		C53B67A81E0424C800E71274 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C53B67A71E0424C800E71274 /* AppDelegate.m */; };
 		C53B67AB1E0424C800E71274 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C53B67AA1E0424C800E71274 /* ViewController.m */; };
@@ -16,6 +18,7 @@
 		C53B67B61E0424C800E71274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53B67B41E0424C800E71274 /* LaunchScreen.storyboard */; };
 		C53B67C11E0424C800E71274 /* MMMobileMoodleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C53B67C01E0424C800E71274 /* MMMobileMoodleTests.m */; };
 		C53B67CC1E0424C800E71274 /* MMMobileMoodleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C53B67CB1E0424C800E71274 /* MMMobileMoodleUITests.m */; };
+		E3264744078F2B4CFEB46D75 /* libPods-MMMobileMoodle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 120371CC239A2874CAA1BB83 /* libPods-MMMobileMoodle.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		120371CC239A2874CAA1BB83 /* libPods-MMMobileMoodle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMMobileMoodle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2055FFCAD3DAD8130432453D /* Pods-MMMobileMoodleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodleTests/Pods-MMMobileMoodleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		47063E6BE477996728EE7E60 /* Pods-MMMobileMoodleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodleTests/Pods-MMMobileMoodleTests.release.xcconfig"; sourceTree = "<group>"; };
+		495F6A4DEB1DBE4BAB04C893 /* libPods-MMMobileMoodleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMMobileMoodleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5046A3D7F145C87166D4C89E /* Pods-MMMobileMoodleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodleUITests/Pods-MMMobileMoodleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		604981798DB5C4D9E28BD7FE /* libPods-MMMobileMoodleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMMobileMoodleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		803123F2CAC5DA666D9DBB01 /* Pods-MMMobileMoodle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodle.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodle/Pods-MMMobileMoodle.release.xcconfig"; sourceTree = "<group>"; };
+		C2008A73190C3C3D12083BBF /* Pods-MMMobileMoodleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodleUITests/Pods-MMMobileMoodleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C53B67A01E0424C800E71274 /* MMMobileMoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMMobileMoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53B67A41E0424C800E71274 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C53B67A61E0424C800E71274 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +64,7 @@
 		C53B67C71E0424C800E71274 /* MMMobileMoodleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMMobileMoodleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53B67CB1E0424C800E71274 /* MMMobileMoodleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMMobileMoodleUITests.m; sourceTree = "<group>"; };
 		C53B67CD1E0424C800E71274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDE3FEDA6A623E7307F6BA0E /* Pods-MMMobileMoodle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodle/Pods-MMMobileMoodle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3264744078F2B4CFEB46D75 /* libPods-MMMobileMoodle.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7B2D023CFB4992E402C198 /* libPods-MMMobileMoodleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6201C41922F345133C558D /* libPods-MMMobileMoodleUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A27BD2B8E96C0B6A1DBCA6C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				120371CC239A2874CAA1BB83 /* libPods-MMMobileMoodle.a */,
+				495F6A4DEB1DBE4BAB04C893 /* libPods-MMMobileMoodleTests.a */,
+				604981798DB5C4D9E28BD7FE /* libPods-MMMobileMoodleUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B29276017D5886C7DBA7B8D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDE3FEDA6A623E7307F6BA0E /* Pods-MMMobileMoodle.debug.xcconfig */,
+				803123F2CAC5DA666D9DBB01 /* Pods-MMMobileMoodle.release.xcconfig */,
+				2055FFCAD3DAD8130432453D /* Pods-MMMobileMoodleTests.debug.xcconfig */,
+				47063E6BE477996728EE7E60 /* Pods-MMMobileMoodleTests.release.xcconfig */,
+				5046A3D7F145C87166D4C89E /* Pods-MMMobileMoodleUITests.debug.xcconfig */,
+				C2008A73190C3C3D12083BBF /* Pods-MMMobileMoodleUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C53B67971E0424C800E71274 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +125,8 @@
 				C53B67BF1E0424C800E71274 /* MMMobileMoodleTests */,
 				C53B67CA1E0424C800E71274 /* MMMobileMoodleUITests */,
 				C53B67A11E0424C800E71274 /* Products */,
+				B29276017D5886C7DBA7B8D1 /* Pods */,
+				A27BD2B8E96C0B6A1DBCA6C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C53B67D01E0424C800E71274 /* Build configuration list for PBXNativeTarget "MMMobileMoodle" */;
 			buildPhases = (
+				33CAC4F32C0BB860BC4CDBFD /* [CP] Check Pods Manifest.lock */,
 				C53B679C1E0424C800E71274 /* Sources */,
 				C53B679D1E0424C800E71274 /* Frameworks */,
 				C53B679E1E0424C800E71274 /* Resources */,
+				65A11D6D77CED6C88E8DD0D8 /* [CP] Embed Pods Frameworks */,
+				374AFD85D11CCFF473B58F41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C53B67D31E0424C800E71274 /* Build configuration list for PBXNativeTarget "MMMobileMoodleTests" */;
 			buildPhases = (
+				0EB1DDC51E962D88A35E2E8B /* [CP] Check Pods Manifest.lock */,
 				C53B67B81E0424C800E71274 /* Sources */,
 				C53B67B91E0424C800E71274 /* Frameworks */,
 				C53B67BA1E0424C800E71274 /* Resources */,
+				787981D841F4FFE038263098 /* [CP] Embed Pods Frameworks */,
+				8E5C3C94F235A1FC27B83798 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C53B67D61E0424C800E71274 /* Build configuration list for PBXNativeTarget "MMMobileMoodleUITests" */;
 			buildPhases = (
+				644A36B3B46D0E1DFA892BC3 /* [CP] Check Pods Manifest.lock */,
 				C53B67C31E0424C800E71274 /* Sources */,
 				C53B67C41E0424C800E71274 /* Frameworks */,
 				C53B67C51E0424C800E71274 /* Resources */,
+				07E15FAD85E4DEABC65906E8 /* [CP] Embed Pods Frameworks */,
+				87FF6FA91182A621B4B37AE9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,6 +322,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07E15FAD85E4DEABC65906E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MMMobileMoodleUITests/Pods-MMMobileMoodleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EB1DDC51E962D88A35E2E8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		33CAC4F32C0BB860BC4CDBFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		374AFD85D11CCFF473B58F41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MMMobileMoodle/Pods-MMMobileMoodle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		644A36B3B46D0E1DFA892BC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		65A11D6D77CED6C88E8DD0D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MMMobileMoodle/Pods-MMMobileMoodle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		787981D841F4FFE038263098 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MMMobileMoodleTests/Pods-MMMobileMoodleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87FF6FA91182A621B4B37AE9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MMMobileMoodleUITests/Pods-MMMobileMoodleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E5C3C94F235A1FC27B83798 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MMMobileMoodleTests/Pods-MMMobileMoodleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C53B679C1E0424C800E71274 /* Sources */ = {
@@ -429,6 +616,7 @@
 		};
 		C53B67D11E0424C800E71274 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDE3FEDA6A623E7307F6BA0E /* Pods-MMMobileMoodle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZFEVCYK5WX;
@@ -442,6 +630,7 @@
 		};
 		C53B67D21E0424C800E71274 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 803123F2CAC5DA666D9DBB01 /* Pods-MMMobileMoodle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZFEVCYK5WX;
@@ -455,6 +644,7 @@
 		};
 		C53B67D41E0424C800E71274 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2055FFCAD3DAD8130432453D /* Pods-MMMobileMoodleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
@@ -468,6 +658,7 @@
 		};
 		C53B67D51E0424C800E71274 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47063E6BE477996728EE7E60 /* Pods-MMMobileMoodleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
@@ -481,6 +672,7 @@
 		};
 		C53B67D71E0424C800E71274 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5046A3D7F145C87166D4C89E /* Pods-MMMobileMoodleUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
 				INFOPLIST_FILE = MMMobileMoodleUITests/Info.plist;
@@ -493,6 +685,7 @@
 		};
 		C53B67D81E0424C800E71274 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2008A73190C3C3D12083BBF /* Pods-MMMobileMoodleUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
 				INFOPLIST_FILE = MMMobileMoodleUITests/Info.plist;
