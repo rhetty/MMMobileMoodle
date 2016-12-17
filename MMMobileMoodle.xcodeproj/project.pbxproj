@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C7B2D023CFB4992E402C198 /* libPods-MMMobileMoodleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 495F6A4DEB1DBE4BAB04C893 /* libPods-MMMobileMoodleTests.a */; };
-		AF6201C41922F345133C558D /* libPods-MMMobileMoodleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 604981798DB5C4D9E28BD7FE /* libPods-MMMobileMoodleUITests.a */; };
+		364769DC29D2CB8661631EC9 /* Pods_MMMobileMoodleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF2836F8AF8A834F91A7294 /* Pods_MMMobileMoodleUITests.framework */; };
+		72FC599251827AADBA6A41D4 /* Pods_MMMobileMoodleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72B8AC750BDE2D3058EAA49 /* Pods_MMMobileMoodleTests.framework */; };
 		C53B67A51E0424C800E71274 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C53B67A41E0424C800E71274 /* main.m */; };
 		C53B67A81E0424C800E71274 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C53B67A71E0424C800E71274 /* AppDelegate.m */; };
 		C53B67AE1E0424C800E71274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53B67AC1E0424C800E71274 /* Main.storyboard */; };
@@ -40,7 +40,9 @@
 		C59063121E044200007CBC3E /* MMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C59063111E044200007CBC3E /* MMNetworkManager.m */; };
 		C59063181E044971007CBC3E /* SigninViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C59063171E044971007CBC3E /* SigninViewController.m */; };
 		C59063201E045519007CBC3E /* UserVO.m in Sources */ = {isa = PBXBuildFile; fileRef = C590631F1E045519007CBC3E /* UserVO.m */; };
-		E3264744078F2B4CFEB46D75 /* libPods-MMMobileMoodle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 120371CC239A2874CAA1BB83 /* libPods-MMMobileMoodle.a */; };
+		C59063231E04DEEF007CBC3E /* MoodleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C59063221E04DEEF007CBC3E /* MoodleViewController.m */; };
+		C59063261E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59063251E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift */; };
+		CA8EA6E71C74B44C6FF6E313 /* Pods_MMMobileMoodle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976905706F4DC99FBE6A20D0 /* Pods_MMMobileMoodle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,13 +63,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		120371CC239A2874CAA1BB83 /* libPods-MMMobileMoodle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMMobileMoodle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2055FFCAD3DAD8130432453D /* Pods-MMMobileMoodleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodleTests/Pods-MMMobileMoodleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47063E6BE477996728EE7E60 /* Pods-MMMobileMoodleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodleTests/Pods-MMMobileMoodleTests.release.xcconfig"; sourceTree = "<group>"; };
-		495F6A4DEB1DBE4BAB04C893 /* libPods-MMMobileMoodleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMMobileMoodleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5046A3D7F145C87166D4C89E /* Pods-MMMobileMoodleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodleUITests/Pods-MMMobileMoodleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		604981798DB5C4D9E28BD7FE /* libPods-MMMobileMoodleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMMobileMoodleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		803123F2CAC5DA666D9DBB01 /* Pods-MMMobileMoodle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodle.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodle/Pods-MMMobileMoodle.release.xcconfig"; sourceTree = "<group>"; };
+		976905706F4DC99FBE6A20D0 /* Pods_MMMobileMoodle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMMobileMoodle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B72B8AC750BDE2D3058EAA49 /* Pods_MMMobileMoodleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMMobileMoodleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2008A73190C3C3D12083BBF /* Pods-MMMobileMoodleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodleUITests/Pods-MMMobileMoodleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C53B67A01E0424C800E71274 /* MMMobileMoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMMobileMoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53B67A41E0424C800E71274 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -133,7 +134,12 @@
 		C59063171E044971007CBC3E /* SigninViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SigninViewController.m; path = Controller/SigninViewController.m; sourceTree = "<group>"; };
 		C590631E1E045519007CBC3E /* UserVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserVO.h; path = VO/UserVO.h; sourceTree = "<group>"; };
 		C590631F1E045519007CBC3E /* UserVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserVO.m; path = VO/UserVO.m; sourceTree = "<group>"; };
+		C59063211E04DEEF007CBC3E /* MoodleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoodleViewController.h; path = Controller/MoodleViewController.h; sourceTree = "<group>"; };
+		C59063221E04DEEF007CBC3E /* MoodleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoodleViewController.m; path = Controller/MoodleViewController.m; sourceTree = "<group>"; };
+		C59063241E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMMobileMoodle-Bridging-Header.h"; sourceTree = "<group>"; };
+		C59063251E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MMMobileMoodle-Bridging-Header.swift"; sourceTree = "<group>"; };
 		CDE3FEDA6A623E7307F6BA0E /* Pods-MMMobileMoodle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodle/Pods-MMMobileMoodle.debug.xcconfig"; sourceTree = "<group>"; };
+		EDF2836F8AF8A834F91A7294 /* Pods_MMMobileMoodleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMMobileMoodleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3264744078F2B4CFEB46D75 /* libPods-MMMobileMoodle.a in Frameworks */,
+				CA8EA6E71C74B44C6FF6E313 /* Pods_MMMobileMoodle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C7B2D023CFB4992E402C198 /* libPods-MMMobileMoodleTests.a in Frameworks */,
+				72FC599251827AADBA6A41D4 /* Pods_MMMobileMoodleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF6201C41922F345133C558D /* libPods-MMMobileMoodleUITests.a in Frameworks */,
+				364769DC29D2CB8661631EC9 /* Pods_MMMobileMoodleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,9 +173,9 @@
 		A27BD2B8E96C0B6A1DBCA6C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				120371CC239A2874CAA1BB83 /* libPods-MMMobileMoodle.a */,
-				495F6A4DEB1DBE4BAB04C893 /* libPods-MMMobileMoodleTests.a */,
-				604981798DB5C4D9E28BD7FE /* libPods-MMMobileMoodleUITests.a */,
+				976905706F4DC99FBE6A20D0 /* Pods_MMMobileMoodle.framework */,
+				B72B8AC750BDE2D3058EAA49 /* Pods_MMMobileMoodleTests.framework */,
+				EDF2836F8AF8A834F91A7294 /* Pods_MMMobileMoodleUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,6 +232,8 @@
 				C59062C11E0430D9007CBC3E /* Model */,
 				C59062C01E0430CB007CBC3E /* Controller */,
 				C53B67A31E0424C800E71274 /* Supporting Files */,
+				C59063251E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift */,
+				C59063241E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.h */,
 			);
 			path = MMMobileMoodle;
 			sourceTree = "<group>";
@@ -259,15 +267,17 @@
 		C59062C01E0430CB007CBC3E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C59063011E043A4B007CBC3E /* Forum */,
 				C59063001E043A45007CBC3E /* Assignment */,
 				C59062FF1E043A36007CBC3E /* Notification */,
+				C59063011E043A4B007CBC3E /* Forum */,
 				C59062FB1E043247007CBC3E /* BaseViewController.h */,
 				C59062FC1E043247007CBC3E /* BaseViewController.m */,
 				C59063021E043A6F007CBC3E /* BaseTableViewController.h */,
 				C59063031E043A6F007CBC3E /* BaseTableViewController.m */,
 				C59063161E044971007CBC3E /* SigninViewController.h */,
 				C59063171E044971007CBC3E /* SigninViewController.m */,
+				C59063211E04DEEF007CBC3E /* MoodleViewController.h */,
+				C59063221E04DEEF007CBC3E /* MoodleViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -488,6 +498,7 @@
 					C53B679F1E0424C800E71274 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = ZFEVCYK5WX;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					C53B67BB1E0424C800E71274 = {
@@ -696,6 +707,7 @@
 			files = (
 				C59063071E043ADE007CBC3E /* AssignmentTVC.m in Sources */,
 				C59062F41E04311C007CBC3E /* UINavigationItem+NoMarginItem.m in Sources */,
+				C59063261E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift in Sources */,
 				C59062FD1E043247007CBC3E /* BaseViewController.m in Sources */,
 				C53B67B11E0424C800E71274 /* MMMobileMoodle.xcdatamodeld in Sources */,
 				C59063121E044200007CBC3E /* MMNetworkManager.m in Sources */,
@@ -706,6 +718,7 @@
 				C59063201E045519007CBC3E /* UserVO.m in Sources */,
 				C53B67A81E0424C800E71274 /* AppDelegate.m in Sources */,
 				C59062EA1E04311C007CBC3E /* DatabaseManager.m in Sources */,
+				C59063231E04DEEF007CBC3E /* MoodleViewController.m in Sources */,
 				C59062EB1E04311C007CBC3E /* CALayer+XibConfiguration.m in Sources */,
 				C59063041E043A6F007CBC3E /* BaseTableViewController.m in Sources */,
 				C59062EC1E04311C007CBC3E /* NSDate+Extends.m in Sources */,
@@ -869,12 +882,17 @@
 			baseConfigurationReference = CDE3FEDA6A623E7307F6BA0E /* Pods-MMMobileMoodle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZFEVCYK5WX;
 				INFOPLIST_FILE = MMMobileMoodle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = first.MMMobileMoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MMMobileMoodle/MMMobileMoodle-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -883,12 +901,16 @@
 			baseConfigurationReference = 803123F2CAC5DA666D9DBB01 /* Pods-MMMobileMoodle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZFEVCYK5WX;
 				INFOPLIST_FILE = MMMobileMoodle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = first.MMMobileMoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MMMobileMoodle/MMMobileMoodle-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -896,6 +918,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2055FFCAD3DAD8130432453D /* Pods-MMMobileMoodleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
 				INFOPLIST_FILE = MMMobileMoodleTests/Info.plist;
@@ -910,6 +933,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47063E6BE477996728EE7E60 /* Pods-MMMobileMoodleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
 				INFOPLIST_FILE = MMMobileMoodleTests/Info.plist;
@@ -924,6 +948,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5046A3D7F145C87166D4C89E /* Pods-MMMobileMoodleUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
 				INFOPLIST_FILE = MMMobileMoodleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -937,6 +962,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C2008A73190C3C3D12083BBF /* Pods-MMMobileMoodleUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
 				INFOPLIST_FILE = MMMobileMoodleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

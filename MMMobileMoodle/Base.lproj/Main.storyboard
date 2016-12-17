@@ -100,35 +100,6 @@
             </objects>
             <point key="canvasLocation" x="-2" y="-230"/>
         </scene>
-        <!--AssignmentTVC-->
-        <scene sceneID="GcN-mo-KnA">
-            <objects>
-                <tableViewController id="GXE-4s-sDn" customClass="AssignmentTVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="HOS-gl-Mor">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bqy-U3-T4t">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bqy-U3-T4t" id="jZo-wY-ZK8">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="GXE-4s-sDn" id="19a-au-18Y"/>
-                            <outlet property="delegate" destination="GXE-4s-sDn" id="3aO-bB-MxU"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="ZFP-fh-B6L"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HxY-XG-A8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2034" y="1364"/>
-        </scene>
         <!--Table View Controller-->
         <scene sceneID="KVe-3N-FNm">
             <objects>
@@ -187,11 +158,11 @@
             </objects>
             <point key="canvasLocation" x="3956" y="1362"/>
         </scene>
-        <!--Assignment-->
+        <!--Moodle-->
         <scene sceneID="eTq-dc-JTy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FWa-Ef-agr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Assignment" id="Luk-R6-bUF"/>
+                    <tabBarItem key="tabBarItem" title="Moodle" id="Luk-R6-bUF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GLK-Lf-dRa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -199,18 +170,58 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="GXE-4s-sDn" kind="relationship" relationship="rootViewController" id="TZq-ol-MPN"/>
+                        <segue destination="mwQ-Nm-iEH" kind="relationship" relationship="rootViewController" id="bJa-Ag-j3i"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ykS-XX-bPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2034.4000000000001" y="653.52323838080963"/>
         </scene>
-        <!--Annoucement-->
+        <!--Moodle View Controller-->
+        <scene sceneID="BAv-4p-uRm">
+            <objects>
+                <viewController id="mwQ-Nm-iEH" customClass="MoodleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YRP-Pq-Uil"/>
+                        <viewControllerLayoutGuide type="bottom" id="6IN-mC-dA1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eJI-s3-QYU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yny-1M-8Fp" customClass="JWTaggedScrollView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yny-1M-8Fp" firstAttribute="leading" secondItem="eJI-s3-QYU" secondAttribute="leading" id="Ost-Eu-cb4"/>
+                            <constraint firstAttribute="trailing" secondItem="Yny-1M-8Fp" secondAttribute="trailing" id="Vhj-6Q-NuY"/>
+                            <constraint firstItem="Yny-1M-8Fp" firstAttribute="top" secondItem="YRP-Pq-Uil" secondAttribute="bottom" id="dZf-T2-gVM"/>
+                            <constraint firstItem="6IN-mC-dA1" firstAttribute="top" secondItem="Yny-1M-8Fp" secondAttribute="bottom" id="dzb-7M-vN7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JWL-eS-Rzh">
+                        <barButtonItem key="rightBarButtonItem" title="Course" id="NaT-Es-dE9">
+                            <connections>
+                                <action selector="courseButtonPressed:" destination="mwQ-Nm-iEH" id="Wh1-0p-tTk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="taggedScrollView" destination="Yny-1M-8Fp" id="3qF-Dt-cQE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hmR-h6-E9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2034.4000000000001" y="1360.569715142429"/>
+        </scene>
+        <!--Archive-->
         <scene sceneID="KF1-BZ-1by">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sIj-d4-mvD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Annoucement" id="bDb-OF-iwU"/>
+                    <tabBarItem key="tabBarItem" title="Archive" id="bDb-OF-iwU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WFm-PR-AoI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -225,11 +236,11 @@
             </objects>
             <point key="canvasLocation" x="936.79999999999995" y="653.52323838080963"/>
         </scene>
-        <!--Forum-->
+        <!--Me-->
         <scene sceneID="awg-SE-JEV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xr5-PN-P3F" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Forum" id="I0o-Tt-9QB"/>
+                    <tabBarItem key="tabBarItem" title="Me" id="I0o-Tt-9QB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zR3-kn-2Vt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

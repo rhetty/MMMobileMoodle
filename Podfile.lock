@@ -15,21 +15,27 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - JSONModel (1.7.0)
+  - JWTaggedScrollView (0.0.1)
   - MBProgressHUD (1.0.0)
+  - Popover (1.0.1)
   - Toast (3.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - JSONModel (~> 1.7.0)
+  - JWTaggedScrollView (~> 0.0.1)
   - MBProgressHUD (~> 1.0.0)
+  - Popover
   - Toast (~> 3.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  JWTaggedScrollView: fd7f7acc4589e737745185b10063ddf918038670
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Popover: 90c76e430242891c184b71bd4343438cbaa6b2ba
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
 
-PODFILE CHECKSUM: a9e09e54726a9a6f8f54c644a095b3793aeb3758
+PODFILE CHECKSUM: a25834fc5f9897803ca4e35263f5ecfa0dea9923
 
 COCOAPODS: 1.2.0.beta.1

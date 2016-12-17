@@ -7,6 +7,7 @@
 //
 
 #import "BaseTableViewController.h"
+#import "AccountInfo.h"
 
 @interface BaseTableViewController ()
 
@@ -17,7 +18,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    //
+    if (![AccountInfo localInstance]) {
+        [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SigninViewController"] animated:YES completion:nil];
+    }
 }
 
 - (void)viewDidLoad {

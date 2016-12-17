@@ -7,7 +7,6 @@
 //
 
 #import "AssignmentTVC.h"
-#import "AccountInfo.h"
 
 @interface AssignmentTVC ()
 
@@ -18,9 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if (![AccountInfo localInstance]) {
-        [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SigninViewController"] animated:YES completion:nil];
-    }
+
 }
 
 - (void)didReceiveMemoryWarning {

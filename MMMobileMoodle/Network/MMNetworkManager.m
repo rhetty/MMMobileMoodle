@@ -74,4 +74,11 @@
     }];
 }
 
+- (void)userCourses:(NSString *)userid callback:(void (^)(NSArray *))callback
+{
+    [self invokeService:@"core_enrol_get_users_courses" callback:^(NSDictionary *res) {
+        NSLog(@"%@", res);
+    }];
+}
+
 @end

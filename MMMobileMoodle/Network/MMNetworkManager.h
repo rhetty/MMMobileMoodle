@@ -16,5 +16,5 @@
 
 + (instancetype)sharedInstance;
 - (void)signin:(NSString *)username password:(NSString *)password callback:(void(^)(UserVO *uvo, NSString *token))callback;
-
+- (void)userCourses:(NSString *)userid callback:(void(^)(NSArray *courses))callback;
 @end

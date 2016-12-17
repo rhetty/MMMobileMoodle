@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MacroUtils.h"
 
 @interface BaseViewController : UIViewController
 
