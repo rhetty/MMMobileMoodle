@@ -8,17 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class RACSignal;
+
 @interface AccountInfo : NSObject
 @property (nonatomic, copy) NSString *username;
 @property (nonatomic, copy) NSString *password;
-@property (nonatomic, copy) NSString *token;
 @property (nonatomic, copy) NSString *serverURL;
 @property (nonatomic, copy) NSString *fullName;
 @property (nonatomic, copy) NSString *remoteID;
 
 + (instancetype)localInstance;
 
-+ (void)signin:(NSString *)serverURL username:(NSString *)username password:(NSString *)password callback:(void(^)(BOOL))callback;
++ (RACSignal *)signinSignal:(NSString *)serverURL username:(NSString *)username password:(NSString *)password;
 
 + (void)logout;
 

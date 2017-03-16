@@ -18,6 +18,13 @@ PODS:
   - JWTaggedScrollView (0.0.1)
   - MBProgressHUD (1.0.0)
   - Popover (1.0.1)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - Toast (3.1.0)
 
 DEPENDENCIES:
@@ -26,6 +33,7 @@ DEPENDENCIES:
   - JWTaggedScrollView (~> 0.0.1)
   - MBProgressHUD (~> 1.0.0)
   - Popover
+  - ReactiveCocoa (~> 2.5)
   - Toast (~> 3.0)
 
 SPEC CHECKSUMS:
@@ -34,8 +42,9 @@ SPEC CHECKSUMS:
   JWTaggedScrollView: fd7f7acc4589e737745185b10063ddf918038670
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Popover: 90c76e430242891c184b71bd4343438cbaa6b2ba
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
 
-PODFILE CHECKSUM: a25834fc5f9897803ca4e35263f5ecfa0dea9923
+PODFILE CHECKSUM: da3841afcbf866b6c04d5d17d63c2c90ace0025d
 
 COCOAPODS: 1.2.0.beta.1

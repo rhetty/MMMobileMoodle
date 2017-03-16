@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SigninViewController">
+            <connections>
+                <outlet property="hintLabel" destination="5v8-qu-faZ" id="TEn-aa-6w3"/>
+                <outlet property="passwordTextField" destination="vrx-rz-mCg" id="pgR-DS-1BW"/>
+                <outlet property="signinButton" destination="iVc-cU-1W6" id="meZ-1x-m08"/>
+                <outlet property="urlTextField" destination="Q36-qB-8Ew" id="3Cq-77-6DK"/>
+                <outlet property="usernameTextField" destination="Cpg-ZS-ABZ" id="5Sx-7P-dcH"/>
+                <outlet property="view" destination="Jw1-hN-EBl" id="ReM-D3-EUM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Jw1-hN-EBl">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://218.94.159.99/" borderStyle="roundedRect" placeholder="url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q36-qB-8Ew">
+                    <rect key="frame" x="8" y="205" width="359" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mf1632025@smail.nju.edu.cn" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cpg-ZS-ABZ">
+                    <rect key="frame" x="8" y="243" width="359" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vrx-rz-mCg">
+                    <rect key="frame" x="8" y="281" width="359" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVc-cU-1W6">
+                    <rect key="frame" x="166" y="319" width="43" height="30"/>
+                    <state key="normal" title="Signin"/>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5v8-qu-faZ">
+                    <rect key="frame" x="166" y="175" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="iVc-cU-1W6" firstAttribute="centerX" secondItem="Jw1-hN-EBl" secondAttribute="centerX" id="2SS-lb-ehY"/>
+                <constraint firstItem="vrx-rz-mCg" firstAttribute="leading" secondItem="Jw1-hN-EBl" secondAttribute="leadingMargin" id="2jP-rQ-9Uc"/>
+                <constraint firstItem="Cpg-ZS-ABZ" firstAttribute="top" secondItem="Q36-qB-8Ew" secondAttribute="bottom" constant="8" id="4xU-Du-yE0"/>
+                <constraint firstItem="Cpg-ZS-ABZ" firstAttribute="trailing" secondItem="Jw1-hN-EBl" secondAttribute="trailingMargin" id="BEL-PS-puo"/>
+                <constraint firstItem="iVc-cU-1W6" firstAttribute="top" secondItem="vrx-rz-mCg" secondAttribute="bottom" constant="8" id="C2k-Jt-A3q"/>
+                <constraint firstItem="Q36-qB-8Ew" firstAttribute="trailing" secondItem="Jw1-hN-EBl" secondAttribute="trailingMargin" id="G7e-Gt-axP"/>
+                <constraint firstItem="5v8-qu-faZ" firstAttribute="centerX" secondItem="Jw1-hN-EBl" secondAttribute="centerX" id="GQk-vg-uZe"/>
+                <constraint firstItem="iVc-cU-1W6" firstAttribute="centerY" secondItem="Jw1-hN-EBl" secondAttribute="centerY" id="QSY-L5-bk0"/>
+                <constraint firstItem="vrx-rz-mCg" firstAttribute="top" secondItem="Cpg-ZS-ABZ" secondAttribute="bottom" constant="8" id="Zmi-Pj-d2s"/>
+                <constraint firstItem="Q36-qB-8Ew" firstAttribute="top" secondItem="5v8-qu-faZ" secondAttribute="bottom" constant="8.5" id="d6x-CI-5e0"/>
+                <constraint firstItem="Q36-qB-8Ew" firstAttribute="leading" secondItem="Jw1-hN-EBl" secondAttribute="leadingMargin" id="dLd-jn-sbM"/>
+                <constraint firstItem="vrx-rz-mCg" firstAttribute="trailing" secondItem="Jw1-hN-EBl" secondAttribute="trailingMargin" id="hqd-75-Khy"/>
+                <constraint firstItem="Cpg-ZS-ABZ" firstAttribute="leading" secondItem="Jw1-hN-EBl" secondAttribute="leadingMargin" id="yDe-gw-u8Z"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

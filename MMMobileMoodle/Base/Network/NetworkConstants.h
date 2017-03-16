@@ -12,3 +12,10 @@
 #define HTTP_METHOD_GET  @"GET"
 #define HTTP_METHOD_PUT  @"PUT"
 #define HTTP_METHOD_DELETE @"DELETE"
+
+typedef NS_ENUM(NSInteger, HTTPMethod) {
+  HTTPMethodGET,
+  HTTPMethodPOST,
+  HTTPMethodPUT,
+  HTTPMethodDELETE
+};

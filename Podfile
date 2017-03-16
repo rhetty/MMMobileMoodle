@@ -10,6 +10,7 @@ pod 'Toast', '~> 3.0'
 pod 'JSONModel', '~> 1.7.0'
 pod 'Popover'
 pod 'JWTaggedScrollView', '~> 0.0.1'
+pod 'ReactiveCocoa', '~> 2.5'
 end
 
 target 'MMMobileMoodleTests' do

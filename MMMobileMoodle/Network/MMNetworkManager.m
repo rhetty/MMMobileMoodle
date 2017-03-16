@@ -9,6 +9,7 @@
 #import "MMNetworkManager.h"
 #import "JWHTTPSessionManager.h"
 #import "UserVO.h"
+#import "ReactiveCocoa.h"
 
 @interface MMNetworkManager()
 @property (strong, nonatomic) JWHTTPSessionManager *sessionManager;
@@ -32,53 +33,72 @@
     return sharedInstance;
 }
 
-- (void)getToken:(NSString *)username password:(NSString *)password completion:(void(^)(NSDictionary *))callback
+- (RACSignal *)tokenSignal:(NSString *)username password:(NSString *)password
 {
-    RequestParameter *parameter = [RequestParameter requestWithURL:[NSString stringWithFormat:@"%@/login/token.php", self.serverURL]
-                                                               json:@{@"username" : username,
-                                                                      @"password" : password,
-                                                                      @"service" : @"moodle_mobile_app"}
-                                   ];
-    [self.sessionManager GET:parameter completion:callback];
-}
-
-- (void)invokeService:(NSString *)service callback:(void(^)(NSDictionary *))callback
-{
-    RequestParameter *parameter = [RequestParameter requestWithURL:[NSString stringWithFormat:@"%@/webservice/rest/server.php", self.serverURL]
-                                                              json:@{@"wstoken":self.token,
-                                                                     @"wsfunction":service,
-                                                                     @"moodlewsrestformat":@"json",
-                                                                     @"moodlewssettingfilter":@"true",
-                                                                     @"moodlewssettingfileurl":@"true"
-                                                                     }];
-    [self.sessionManager GET:parameter completion:callback];
-}
-
-- (void)signin:(NSString *)username password:(NSString *)password callback:(void(^)(UserVO *uvo, NSString *token))callback
-{
-    [self getToken:username password:password completion:^(NSDictionary *res) {
-        if ([res valueForKey:@"token"]) {
-            self.token = [res valueForKey:@"token"];
-            [self invokeService:@"core_webservice_get_site_info" callback:^(NSDictionary *res) {
-                NSError *error;
-                UserVO *uvo = [[UserVO alloc] initWithDictionary:res error:&error];
-                if (error) {
-                    debugLog(@"%@", error);
-                }
-                callback(uvo, self.token);
+  if (self.token) {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+      [subscriber sendCompleted];
+      return nil;
+    }];
+  } else {
+    @weakify(self)
+    return [[self.sessionManager httpRequest:HTTPMethodGET
+                                        url:@"/login/token.php"
+                                     params:@{@"username" : username,
+                                              @"password" : password,
+                                              @"service" : @"moodle_mobile_app"}]
+            map:^id(NSDictionary *response) {
+              @strongify(self)
+              self.token = [response objectForKey:@"token"];
+              return nil;
             }];
-        } else {
-            debugLog(@"%@", res);
-            callback(nil, nil);
-        }
-    }];
+  }
 }
 
-- (void)userCourses:(NSString *)userid callback:(void (^)(NSArray *))callback
+- (RACSignal *)invokeService:(NSString *)service
 {
-    [self invokeService:@"core_enrol_get_users_courses" callback:^(NSDictionary *res) {
-        NSLog(@"%@", res);
-    }];
+  return [self.sessionManager httpRequest:HTTPMethodGET
+                                      url:@"/webservice/rest/server.php"
+                                   params:@{@"wstoken":self.token,
+                                            @"wsfunction":service,
+                                            @"moodlewsrestformat":@"json",
+                                            @"moodlewssettingfilter":@"true",
+                                            @"moodlewssettingfileurl":@"true"
+                                            }];
+}
+
+- (RACSignal *)signin:(NSString *)username password:(NSString *)password
+{
+  @weakify(self)
+  return [[self tokenSignal:username password:password] then:^RACSignal *{
+    @strongify(self)
+    if (self.token) {
+      return [[self invokeService:@"core_webservice_get_site_info"]
+              map:^id(NSDictionary *response) {
+                NSError *error;
+                UserVO *uvo = [[UserVO alloc] initWithDictionary:response error:&error];
+                if (error) {
+                  debugLog(@"%@", error);
+                }
+                return uvo;
+              }];
+    } else {
+      return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:nil];
+        [subscriber sendCompleted];
+        return nil;
+      }];
+    }
+  }];
+}
+
+- (RACSignal *)userCourses:(NSString *)userid
+{
+  return [[self invokeService:@"core_enrol_get_users_courses"]
+          map:^id(NSDictionary *response) {
+            debugLog(@"%@", response);
+            return nil;
+          }];
 }
 
 @end
