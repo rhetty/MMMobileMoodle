@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const kSigninNotificationName;
+
 @class RACSignal;
 
 @interface AccountInfo : NSObject

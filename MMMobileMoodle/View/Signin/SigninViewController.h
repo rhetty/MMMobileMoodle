@@ -8,9 +8,6 @@
 
 #import "MMBaseViewController.h"
 
-//@class MMSigninViewModel;
-
 @interface SigninViewController : MMBaseViewController
-//@property (nonatomic, weak) id<SigninDelegate> delegate;
-//- (instancetype)initWithViewMoodle:(MMSigninViewModel *)viewModel;
+
 @end

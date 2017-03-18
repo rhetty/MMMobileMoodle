@@ -18,7 +18,7 @@
 @property (strong, nonatomic) Popover *coursePopover;
 @property (strong, nonatomic) UITableView *courseView;
 
-@property (nonatomic, weak) MMMoodleViewModel *viewModel;
+@property (nonatomic, strong) MMMoodleViewModel *viewModel;
 
 @end
 

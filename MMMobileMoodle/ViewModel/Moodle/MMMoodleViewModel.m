@@ -7,7 +7,24 @@
 //
 
 #import "MMMoodleViewModel.h"
+#import "AccountInfo.h"
 
 @implementation MMMoodleViewModel
+- (void)initialize
+{
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(didSignin:)
+                                               name:kSigninNotificationName
+                                             object:nil];
+}
 
+- (void)didSignin:(NSNotification *)notification
+{
+  
+}
+
+- (void)dealloc
+{
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 @end

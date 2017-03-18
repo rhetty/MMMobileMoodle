@@ -8,8 +8,6 @@
 
 #import "MMBaseViewController.h"
 
-//@class MMMoodleViewModel;
-
 @interface MMMoodleViewController : MMBaseViewController
-//- (instancetype)initWithViewModel:(MMMoodleViewModel *)viewModel;
+
 @end

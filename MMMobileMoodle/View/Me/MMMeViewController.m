@@ -10,7 +10,7 @@
 #import "MMMeViewModel.h"
 
 @interface MMMeViewController ()
-@property (nonatomic, weak) MMMeViewModel *viewModel;
+@property (nonatomic, strong) MMMeViewModel *viewModel;
 @end
 
 @implementation MMMeViewController

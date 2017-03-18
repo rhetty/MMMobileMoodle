@@ -18,6 +18,8 @@
 #define FULL_NAME_KEY @"full_name"
 #define REMOTE_ID_KEY @"remote_id"
 
+NSString *const kSigninNotificationName = @"Signin";
+
 @implementation AccountInfo
 
 static AccountInfo *instance = nil;
@@ -44,6 +46,8 @@ static AccountInfo *instance = nil;
               account.fullName = uvo.fullname;
               account.remoteID = uvo.userid;
               [account persist];
+              
+              [[NSNotificationCenter defaultCenter] postNotificationName:kSigninNotificationName object:account];
               
               return @YES;
             } else {

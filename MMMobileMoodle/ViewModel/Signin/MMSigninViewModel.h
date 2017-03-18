@@ -8,10 +8,6 @@
 
 #import "MMViewModel.h"
 
-@protocol SigninDelegate <NSObject>
-- (void)didSignin;
-@end
-
 @interface MMSigninViewModel : MMViewModel
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSString *username;
@@ -19,5 +15,4 @@
 @property (nonatomic, strong, readonly) NSString *hint;
 @property (nonatomic, assign, readonly) BOOL displayHint;
 @property (nonatomic, strong, readonly) RACCommand *signinCommand;
-@property (nonatomic, weak) id<SigninDelegate> delegate;
 @end

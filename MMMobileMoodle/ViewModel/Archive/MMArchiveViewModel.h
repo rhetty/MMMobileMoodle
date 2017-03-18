@@ -7,6 +7,9 @@
 //
 
 #import "MMViewModel.h"
+#import "AccountInfo.h"
+
+extern NSString *const kSigninNotificationName;
 
 @interface MMArchiveViewModel : MMViewModel
 

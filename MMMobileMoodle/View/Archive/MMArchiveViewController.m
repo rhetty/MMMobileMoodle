@@ -10,7 +10,7 @@
 #import "MMArchiveViewModel.h"
 
 @interface MMArchiveViewController ()
-@property (nonatomic, weak) MMArchiveViewModel *viewModel;
+@property (nonatomic, strong) MMArchiveViewModel *viewModel;
 @end
 
 @implementation MMArchiveViewController

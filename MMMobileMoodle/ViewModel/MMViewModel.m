@@ -21,6 +21,6 @@
 
 - (void)initialize
 {
-  
+  NSAssert(NO, @"[MMViewModel - initialize] should be implemented.");
 }
 @end
