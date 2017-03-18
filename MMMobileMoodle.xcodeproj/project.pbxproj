@@ -265,8 +265,6 @@
 				C580CE091E75434F00980375 /* Signin */,
 				C580CDF91E751A7300980375 /* MMViewModel.h */,
 				C580CDFA1E751A7300980375 /* MMViewModel.m */,
-				C580CDFC1E751A9F00980375 /* MMCourseListViewModel.h */,
-				C580CDFD1E751A9F00980375 /* MMCourseListViewModel.m */,
 				C580CDFF1E75399E00980375 /* MMViewModelService.h */,
 				C580CE001E753F4000980375 /* MMViewModelServiceImpl.h */,
 				C580CE011E753F4000980375 /* MMViewModelServiceImpl.m */,
@@ -316,6 +314,8 @@
 			children = (
 				C580CE161E75443500980375 /* MMMoodleViewModel.h */,
 				C580CE171E75443500980375 /* MMMoodleViewModel.m */,
+				C580CDFC1E751A9F00980375 /* MMCourseListViewModel.h */,
+				C580CDFD1E751A9F00980375 /* MMCourseListViewModel.m */,
 			);
 			name = Moodle;
 			sourceTree = "<group>";

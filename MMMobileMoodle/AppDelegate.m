@@ -44,9 +44,9 @@
   UINavigationController *meNavigationController = [[UINavigationController alloc] initWithRootViewController:meViewController];
   meViewModelService.navigationController = meNavigationController;
   
-  moodleNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Moodle", nil) image:nil tag:1];
-  archiveNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Archive", nil) image:nil tag:2];
-  meNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Me", nil) image:nil tag:3];
+  moodleNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Moodle", nil) image:[UIImage imageNamed:@"moodle_icon"] tag:1];
+  archiveNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Archive", nil) image:[UIImage imageNamed:@"archive_icon"] tag:2];
+  meNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Me", nil) image:[UIImage imageNamed:@"me_icon"] tag:3];
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
   tabBarController.viewControllers = @[moodleNavigationController, archiveNavigationController, meNavigationController];
   return tabBarController;
@@ -59,11 +59,11 @@
   self.window.rootViewController = [self createInitialViewController];
   [self.window makeKeyAndVisible];
   
-  //  if (![AccountInfo localInstance]) {
-  MMSigninViewModel *signinViewModel = [[MMSigninViewModel alloc] initWithService:nil];
-  SigninViewController *svc = [[SigninViewController alloc] initWithViewModel:signinViewModel];
-  [self.window.rootViewController presentViewController:svc animated:NO completion:nil];
-  //  }
+  if (![AccountInfo localInstance]) {
+    MMSigninViewModel *signinViewModel = [[MMSigninViewModel alloc] initWithService:nil];
+    SigninViewController *svc = [[SigninViewController alloc] initWithViewModel:signinViewModel];
+    [self.window.rootViewController presentViewController:svc animated:NO completion:nil];
+  }
   
     return YES;
 }
