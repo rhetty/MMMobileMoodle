@@ -59,13 +59,19 @@
   self.window.rootViewController = [self createInitialViewController];
   [self.window makeKeyAndVisible];
   
-  if (![AccountInfo localInstance]) {
-    MMSigninViewModel *signinViewModel = [[MMSigninViewModel alloc] initWithService:nil];
-    SigninViewController *svc = [[SigninViewController alloc] initWithViewModel:signinViewModel];
-    [self.window.rootViewController presentViewController:svc animated:NO completion:nil];
-  }
+  @weakify(self);
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    [[AccountInfo autoSignin] subscribeNext:^(NSNumber *success) {
+      @strongify(self);
+      if (!success.boolValue) {
+        MMSigninViewModel *signinViewModel = [[MMSigninViewModel alloc] initWithService:nil];
+        SigninViewController *svc = [[SigninViewController alloc] initWithViewModel:signinViewModel];
+        [self.window.rootViewController presentViewController:svc animated:YES completion:nil];
+      }
+    }];
+  });
   
-    return YES;
+  return YES;
 }
 
 

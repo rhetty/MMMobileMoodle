@@ -13,13 +13,15 @@ extern NSString *const kSigninNotificationName;
 @class RACSignal;
 
 @interface AccountInfo : NSObject
-@property (nonatomic, copy) NSString *username;
-@property (nonatomic, copy) NSString *password;
-@property (nonatomic, copy) NSString *serverURL;
-@property (nonatomic, copy) NSString *fullName;
-@property (nonatomic, copy) NSString *remoteID;
+@property (nonatomic, copy, readonly) NSString *username;
+@property (nonatomic, copy, readonly) NSString *password;
+@property (nonatomic, copy, readonly) NSString *serverURL;
+@property (nonatomic, copy, readonly) NSString *fullName;
+@property (nonatomic, copy, readonly) NSString *remoteID;
 
 + (instancetype)localInstance;
+
++ (RACSignal *)autoSignin;
 
 + (RACSignal *)signinSignal:(NSString *)serverURL username:(NSString *)username password:(NSString *)password;
 

@@ -20,6 +20,14 @@
 
 NSString *const kSigninNotificationName = @"Signin";
 
+@interface AccountInfo()
+@property (nonatomic, copy, readwrite) NSString *username;
+@property (nonatomic, copy, readwrite) NSString *password;
+@property (nonatomic, copy, readwrite) NSString *serverURL;
+@property (nonatomic, copy, readwrite) NSString *fullName;
+@property (nonatomic, copy, readwrite) NSString *remoteID;
+@end
+
 @implementation AccountInfo
 
 static AccountInfo *instance = nil;
@@ -31,6 +39,20 @@ static AccountInfo *instance = nil;
         instance =  data ? [NSKeyedUnarchiver unarchiveObjectWithData:data] : nil;
     }
     return instance;
+}
+
++ (RACSignal *)autoSignin
+{
+  AccountInfo *instance = [self localInstance];
+  if (instance) {
+    return [self signinSignal:instance.serverURL username:instance.username password:instance.password];
+  } else {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+      [subscriber sendNext:nil];
+      [subscriber sendCompleted];
+      return nil;
+    }];
+  }
 }
 
 + (RACSignal *)signinSignal:(NSString *)serverURL username:(NSString *)username password:(NSString *)password
