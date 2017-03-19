@@ -8,6 +8,12 @@
 
 #import "MMMoodleViewModel.h"
 #import "AccountInfo.h"
+#import "MMNetworkManager.h"
+#import "CourseVO.h"
+
+@interface MMMoodleViewModel()
+@property (nonatomic, strong, readwrite) NSArray *courses;
+@end
 
 @implementation MMMoodleViewModel
 - (void)initialize
@@ -20,7 +26,21 @@
 
 - (void)didSignin:(NSNotification *)notification
 {
-  
+  [[[MMNetworkManager sharedInstance] userCourses:[AccountInfo sharedInstance].remoteID] subscribeNext:^(NSDictionary *response) {
+    if (response) {
+      NSMutableArray *courseList = [NSMutableArray arrayWithCapacity:response.count];
+      for (NSDictionary *dict in response) {
+        NSError *error;
+        CourseVO *cvo = [[CourseVO alloc] initWithDictionary:dict error:&error];
+        if (error) {
+          debugLog(@"%@", error);
+        }
+        MMCourseViewModel *cvm = [[MMCourseViewModel alloc] initWithCourse:cvo];
+        [courseList addObject:cvm];
+      }
+      self.courses = courseList;
+    }
+  }];
 }
 
 - (void)dealloc

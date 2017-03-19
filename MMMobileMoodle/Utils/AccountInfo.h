@@ -19,7 +19,7 @@ extern NSString *const kSigninNotificationName;
 @property (nonatomic, copy, readonly) NSString *fullName;
 @property (nonatomic, copy, readonly) NSString *remoteID;
 
-+ (instancetype)localInstance;
++ (instancetype)sharedInstance;
 
 + (RACSignal *)autoSignin;
 

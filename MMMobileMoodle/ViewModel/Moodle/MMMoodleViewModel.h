@@ -7,7 +7,8 @@
 //
 
 #import "MMViewModel.h"
+#import "MMCourseViewModel.h"
 
 @interface MMMoodleViewModel : MMViewModel
-
+@property (nonatomic, strong, readonly) NSArray<MMCourseViewModel *> *courses;
 @end

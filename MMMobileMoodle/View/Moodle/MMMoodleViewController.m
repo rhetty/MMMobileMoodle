@@ -12,26 +12,16 @@
 #import "AccountInfo.h"
 #import "SigninViewController.h"
 #import "MMMoodleViewModel.h"
+#import "JWComboBox.h"
 
-@interface MMMoodleViewController ()<JWTaggedScrollViewDataSource, JWTaggedScrollViewDelegate>
+@interface MMMoodleViewController ()<JWTaggedScrollViewDataSource, JWTaggedScrollViewDelegate, JWComboBoxDataSource, JWComboBoxDelegate>
 @property (weak, nonatomic) IBOutlet JWTaggedScrollView *taggedScrollView;
-@property (strong, nonatomic) Popover *coursePopover;
-@property (strong, nonatomic) UITableView *courseView;
 
 @property (nonatomic, strong) MMMoodleViewModel *viewModel;
-
+@property (nonatomic, weak) JWComboBox *courseSelectView;
 @end
 
 @implementation MMMoodleViewController
-
-//- (instancetype)initWithViewModel:(MMMoodleViewModel *)viewModel
-//{
-//  self = [super init];
-//  if (self) {
-//    self.viewMoodle = viewModel;
-//  }
-//  return self;
-//}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -41,6 +31,18 @@
   
   self.automaticallyAdjustsScrollViewInsets = NO;
   
+  JWComboBox *comboBox = [[JWComboBox alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width * 0.5, UI_NAVIGATION_BAR_HEIGHT)];
+  comboBox.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+  comboBox.backgroundColor = [UIColor clearColor];
+  comboBox.dataSource = self;
+  comboBox.delegate = self;
+  comboBox.contentLabelColor = [UIColor blackColor];
+  self.navigationItem.titleView = comboBox;
+  self.courseSelectView = comboBox;
+  
+  [RACObserve(self.viewModel, courses) subscribeNext:^(id x) {
+    [self.courseSelectView reloadData];
+  }];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -52,31 +54,6 @@
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Properties
-
-- (UITableView *)courseView
-{
-  if (!_courseView) {
-    _courseView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 200, 400)];
-  }
-  return _courseView;
-}
-
-- (Popover *)coursePopover
-{
-  if (!_coursePopover) {
-    _coursePopover = [[Popover alloc] init];
-  }
-  return _coursePopover;
-}
-
-#pragma mark - SigninDelegate
-
-- (void)didSignin
-{
-  
 }
 
 #pragma mark - JWTaggedScrollViewDataSource
@@ -127,11 +104,23 @@
   
 }
 
-#pragma mark - Action
+#pragma mark - JWComboBoxDataSource
 
-- (IBAction)courseButtonPressed:(id)sender
+- (NSUInteger)numberOfOptionsInComboBox:(JWComboBox *)comboBox
 {
-  [self.coursePopover show:self.courseView point:CGPointMake(self.view.frame.size.width - 45, 64)];
+  return self.viewModel.courses.count;
+}
+
+- (NSString *)comboBox:(JWComboBox *)comboBox contentAt:(NSUInteger)index
+{
+  return self.viewModel.courses[index].displayContent;
+}
+
+#pragma mark - JWComboBoxDelegate
+
+- (void)comboBox:(JWComboBox *)comboBox didSelectAt:(NSUInteger)index
+{
+  debugLog(@"%li", index);
 }
 
 @end

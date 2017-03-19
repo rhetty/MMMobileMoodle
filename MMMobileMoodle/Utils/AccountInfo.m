@@ -32,13 +32,20 @@ NSString *const kSigninNotificationName = @"Signin";
 
 static AccountInfo *instance = nil;
 
++ (instancetype)sharedInstance
+{
+  if (instance) {
+    return instance;
+  } else {
+    return [self localInstance];
+  }
+}
+
 + (instancetype)localInstance
 {
-    if (!instance) {
-        NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:ACCOUNT_KEY];
-        instance =  data ? [NSKeyedUnarchiver unarchiveObjectWithData:data] : nil;
-    }
-    return instance;
+  NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:ACCOUNT_KEY];
+  instance =  data ? [NSKeyedUnarchiver unarchiveObjectWithData:data] : nil;
+  return instance;
 }
 
 + (RACSignal *)autoSignin
@@ -80,7 +87,8 @@ static AccountInfo *instance = nil;
 
 + (void)logout
 {
-    [self remove];
+  [self remove];
+  instance = nil;
 }
 
 - (void)persist

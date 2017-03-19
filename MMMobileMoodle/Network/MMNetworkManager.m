@@ -55,16 +55,11 @@
   }
 }
 
-- (RACSignal *)invokeService:(NSString *)service
+- (RACSignal *)invokeService:(NSString *)service data:(NSDictionary *)data
 {
   return [self.sessionManager httpRequest:HTTPMethodGET
-                                      url:@"/webservice/rest/server.php"
-                                   params:@{@"wstoken":self.token,
-                                            @"wsfunction":service,
-                                            @"moodlewsrestformat":@"json",
-                                            @"moodlewssettingfilter":@"true",
-                                            @"moodlewssettingfileurl":@"true"
-                                            }];
+                                      url:[NSString stringWithFormat:@"/webservice/rest/server.php?moodlewsrestformat=json&moodlewssettingfilter=true&moodlewssettingfileurl=true&wstoken=%@&wsfunction=%@", self.token, service]
+                                   params:data];
 }
 
 - (RACSignal *)signin:(NSString *)username password:(NSString *)password
@@ -73,7 +68,7 @@
   return [[self tokenSignal:username password:password] then:^RACSignal *{
     @strongify(self)
     if (self.token) {
-      return [[self invokeService:@"core_webservice_get_site_info"]
+      return [[self invokeService:@"core_webservice_get_site_info" data:nil]
               map:^id(NSDictionary *response) {
                 NSError *error;
                 UserVO *uvo = [[UserVO alloc] initWithDictionary:response error:&error];
@@ -94,11 +89,7 @@
 
 - (RACSignal *)userCourses:(NSString *)userid
 {
-  return [[self invokeService:@"core_enrol_get_users_courses"]
-          map:^id(NSDictionary *response) {
-            debugLog(@"%@", response);
-            return nil;
-          }];
+  return [self invokeService:@"core_enrol_get_users_courses" data:@{@"userid": userid}];
 }
 
 @end
