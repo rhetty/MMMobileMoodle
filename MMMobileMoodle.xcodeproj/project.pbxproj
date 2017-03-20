@@ -16,9 +16,9 @@
 		C53B67B61E0424C800E71274 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53B67B41E0424C800E71274 /* LaunchScreen.storyboard */; };
 		C53B67C11E0424C800E71274 /* MMMobileMoodleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C53B67C01E0424C800E71274 /* MMMobileMoodleTests.m */; };
 		C53B67CC1E0424C800E71274 /* MMMobileMoodleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C53B67CB1E0424C800E71274 /* MMMobileMoodleUITests.m */; };
-		C56613E21E7E691900E252EC /* JWComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = C56613E11E7E691900E252EC /* JWComboBox.m */; };
 		C56613E51E7E80FC00E252EC /* CourseVO.m in Sources */ = {isa = PBXBuildFile; fileRef = C56613E41E7E80FC00E252EC /* CourseVO.m */; };
 		C56613E81E7E840F00E252EC /* MMCourseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C56613E71E7E840F00E252EC /* MMCourseViewModel.m */; };
+		C56613EE1E7EA58D00E252EC /* MMNotificationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C56613ED1E7EA58D00E252EC /* MMNotificationViewModel.m */; };
 		C580CDFB1E751A7300980375 /* MMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C580CDFA1E751A7300980375 /* MMViewModel.m */; };
 		C580CE021E753F4000980375 /* MMViewModelServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C580CE011E753F4000980375 /* MMViewModelServiceImpl.m */; };
 		C580CE051E7541C200980375 /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C580CE041E7541C200980375 /* SigninViewController.xib */; };
@@ -42,6 +42,17 @@
 		C59063121E044200007CBC3E /* MMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C59063111E044200007CBC3E /* MMNetworkManager.m */; };
 		C59063201E045519007CBC3E /* UserVO.m in Sources */ = {isa = PBXBuildFile; fileRef = C590631F1E045519007CBC3E /* UserVO.m */; };
 		C59063261E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59063251E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift */; };
+		C5FBF5A41E7F9F3100CDE642 /* MMForumViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5A31E7F9F3100CDE642 /* MMForumViewModel.m */; };
+		C5FBF5A71E7F9F4A00CDE642 /* MMAssignmentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5A61E7F9F4A00CDE642 /* MMAssignmentViewModel.m */; };
+		C5FBF5AD1E7FC7CC00CDE642 /* MMAssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5AC1E7FC7CC00CDE642 /* MMAssignmentViewController.m */; };
+		C5FBF5AF1E7FC80800CDE642 /* MMAssignmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FBF5AE1E7FC80800CDE642 /* MMAssignmentViewController.xib */; };
+		C5FBF5B21E7FC87D00CDE642 /* MMNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5B11E7FC87D00CDE642 /* MMNotificationViewController.m */; };
+		C5FBF5B41E7FC89700CDE642 /* MMNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FBF5B31E7FC89700CDE642 /* MMNotificationViewController.xib */; };
+		C5FBF5B71E7FC8B300CDE642 /* MMForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5B61E7FC8B300CDE642 /* MMForumViewController.m */; };
+		C5FBF5B91E7FC8C400CDE642 /* MMForumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FBF5B81E7FC8C400CDE642 /* MMForumViewController.xib */; };
+		C5FBF5CE1E7FEB9A00CDE642 /* JWTaggedPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5C91E7FEB9A00CDE642 /* JWTaggedPageViewController.m */; };
+		C5FBF5D01E7FEB9A00CDE642 /* JWTaggedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5CD1E7FEB9A00CDE642 /* JWTaggedScrollView.m */; };
+		C5FBF5D41E80048F00CDE642 /* JWComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5D31E80048F00CDE642 /* JWComboBox.m */; };
 		CA8EA6E71C74B44C6FF6E313 /* Pods_MMMobileMoodle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976905706F4DC99FBE6A20D0 /* Pods_MMMobileMoodle.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,12 +95,12 @@
 		C53B67C71E0424C800E71274 /* MMMobileMoodleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMMobileMoodleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53B67CB1E0424C800E71274 /* MMMobileMoodleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMMobileMoodleUITests.m; sourceTree = "<group>"; };
 		C53B67CD1E0424C800E71274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C56613E01E7E691900E252EC /* JWComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWComboBox.h; sourceTree = "<group>"; };
-		C56613E11E7E691900E252EC /* JWComboBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWComboBox.m; sourceTree = "<group>"; };
 		C56613E31E7E80FC00E252EC /* CourseVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CourseVO.h; path = VO/CourseVO.h; sourceTree = "<group>"; };
 		C56613E41E7E80FC00E252EC /* CourseVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CourseVO.m; path = VO/CourseVO.m; sourceTree = "<group>"; };
 		C56613E61E7E840F00E252EC /* MMCourseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMCourseViewModel.h; path = ViewModel/Moodle/MMCourseViewModel.h; sourceTree = "<group>"; };
 		C56613E71E7E840F00E252EC /* MMCourseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMCourseViewModel.m; path = ViewModel/Moodle/MMCourseViewModel.m; sourceTree = "<group>"; };
+		C56613EC1E7EA58D00E252EC /* MMNotificationViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMNotificationViewModel.h; path = ViewModel/Moodle/Notification/MMNotificationViewModel.h; sourceTree = "<group>"; };
+		C56613ED1E7EA58D00E252EC /* MMNotificationViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMNotificationViewModel.m; path = ViewModel/Moodle/Notification/MMNotificationViewModel.m; sourceTree = "<group>"; };
 		C580CDF91E751A7300980375 /* MMViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMViewModel.h; path = ViewModel/MMViewModel.h; sourceTree = "<group>"; };
 		C580CDFA1E751A7300980375 /* MMViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMViewModel.m; path = ViewModel/MMViewModel.m; sourceTree = "<group>"; };
 		C580CDFF1E75399E00980375 /* MMViewModelService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMViewModelService.h; path = ViewModel/MMViewModelService.h; sourceTree = "<group>"; };
@@ -136,6 +147,25 @@
 		C590631F1E045519007CBC3E /* UserVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserVO.m; path = VO/UserVO.m; sourceTree = "<group>"; };
 		C59063241E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMMobileMoodle-Bridging-Header.h"; sourceTree = "<group>"; };
 		C59063251E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MMMobileMoodle-Bridging-Header.swift"; sourceTree = "<group>"; };
+		C5FBF5A21E7F9F3100CDE642 /* MMForumViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMForumViewModel.h; path = ViewModel/Moodle/Forum/MMForumViewModel.h; sourceTree = "<group>"; };
+		C5FBF5A31E7F9F3100CDE642 /* MMForumViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMForumViewModel.m; path = ViewModel/Moodle/Forum/MMForumViewModel.m; sourceTree = "<group>"; };
+		C5FBF5A51E7F9F4A00CDE642 /* MMAssignmentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMAssignmentViewModel.h; path = ViewModel/Moodle/Assignment/MMAssignmentViewModel.h; sourceTree = "<group>"; };
+		C5FBF5A61E7F9F4A00CDE642 /* MMAssignmentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMAssignmentViewModel.m; path = ViewModel/Moodle/Assignment/MMAssignmentViewModel.m; sourceTree = "<group>"; };
+		C5FBF5AB1E7FC7CC00CDE642 /* MMAssignmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMAssignmentViewController.h; path = View/Moodle/Assignment/MMAssignmentViewController.h; sourceTree = "<group>"; };
+		C5FBF5AC1E7FC7CC00CDE642 /* MMAssignmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMAssignmentViewController.m; path = View/Moodle/Assignment/MMAssignmentViewController.m; sourceTree = "<group>"; };
+		C5FBF5AE1E7FC80800CDE642 /* MMAssignmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MMAssignmentViewController.xib; path = View/Moodle/Assignment/MMAssignmentViewController.xib; sourceTree = "<group>"; };
+		C5FBF5B01E7FC87D00CDE642 /* MMNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMNotificationViewController.h; path = View/Moodle/Notification/MMNotificationViewController.h; sourceTree = "<group>"; };
+		C5FBF5B11E7FC87D00CDE642 /* MMNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMNotificationViewController.m; path = View/Moodle/Notification/MMNotificationViewController.m; sourceTree = "<group>"; };
+		C5FBF5B31E7FC89700CDE642 /* MMNotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MMNotificationViewController.xib; path = View/Moodle/Notification/MMNotificationViewController.xib; sourceTree = "<group>"; };
+		C5FBF5B51E7FC8B300CDE642 /* MMForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMForumViewController.h; path = View/Moodle/Forum/MMForumViewController.h; sourceTree = "<group>"; };
+		C5FBF5B61E7FC8B300CDE642 /* MMForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMForumViewController.m; path = View/Moodle/Forum/MMForumViewController.m; sourceTree = "<group>"; };
+		C5FBF5B81E7FC8C400CDE642 /* MMForumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MMForumViewController.xib; path = View/Moodle/Forum/MMForumViewController.xib; sourceTree = "<group>"; };
+		C5FBF5C81E7FEB9A00CDE642 /* JWTaggedPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTaggedPageViewController.h; sourceTree = "<group>"; };
+		C5FBF5C91E7FEB9A00CDE642 /* JWTaggedPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTaggedPageViewController.m; sourceTree = "<group>"; };
+		C5FBF5CC1E7FEB9A00CDE642 /* JWTaggedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTaggedScrollView.h; sourceTree = "<group>"; };
+		C5FBF5CD1E7FEB9A00CDE642 /* JWTaggedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTaggedScrollView.m; sourceTree = "<group>"; };
+		C5FBF5D21E80048F00CDE642 /* JWComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWComboBox.h; sourceTree = "<group>"; };
+		C5FBF5D31E80048F00CDE642 /* JWComboBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWComboBox.m; sourceTree = "<group>"; };
 		CDE3FEDA6A623E7307F6BA0E /* Pods-MMMobileMoodle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMMobileMoodle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMMobileMoodle/Pods-MMMobileMoodle.debug.xcconfig"; sourceTree = "<group>"; };
 		EDF2836F8AF8A834F91A7294 /* Pods_MMMobileMoodleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMMobileMoodleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -216,6 +246,7 @@
 		C53B67A21E0424C800E71274 /* MMMobileMoodle */ = {
 			isa = PBXGroup;
 			children = (
+				C5FBF5C61E7FEB9A00CDE642 /* Tools */,
 				C580CDF81E751A2500980375 /* ViewModel */,
 				C590631D1E045504007CBC3E /* VO */,
 				C590630F1E044200007CBC3E /* Network */,
@@ -262,14 +293,31 @@
 			path = MMMobileMoodleUITests;
 			sourceTree = "<group>";
 		};
-		C56613DF1E7E691900E252EC /* ComboBox */ = {
+		C56613E91E7EA51500E252EC /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				C56613E01E7E691900E252EC /* JWComboBox.h */,
-				C56613E11E7E691900E252EC /* JWComboBox.m */,
+				C5FBF5A51E7F9F4A00CDE642 /* MMAssignmentViewModel.h */,
+				C5FBF5A61E7F9F4A00CDE642 /* MMAssignmentViewModel.m */,
 			);
-			name = ComboBox;
-			path = View/ComboBox;
+			name = Assignment;
+			sourceTree = "<group>";
+		};
+		C56613EA1E7EA52300E252EC /* Forum */ = {
+			isa = PBXGroup;
+			children = (
+				C5FBF5A21E7F9F3100CDE642 /* MMForumViewModel.h */,
+				C5FBF5A31E7F9F3100CDE642 /* MMForumViewModel.m */,
+			);
+			name = Forum;
+			sourceTree = "<group>";
+		};
+		C56613EB1E7EA52A00E252EC /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				C56613EC1E7EA58D00E252EC /* MMNotificationViewModel.h */,
+				C56613ED1E7EA58D00E252EC /* MMNotificationViewModel.m */,
+			);
+			name = Notification;
 			sourceTree = "<group>";
 		};
 		C580CDF81E751A2500980375 /* ViewModel */ = {
@@ -328,6 +376,9 @@
 		C580CE151E75440500980375 /* Moodle */ = {
 			isa = PBXGroup;
 			children = (
+				C56613EB1E7EA52A00E252EC /* Notification */,
+				C56613EA1E7EA52300E252EC /* Forum */,
+				C56613E91E7EA51500E252EC /* Assignment */,
 				C580CE161E75443500980375 /* MMMoodleViewModel.h */,
 				C580CE171E75443500980375 /* MMMoodleViewModel.m */,
 				C56613E61E7E840F00E252EC /* MMCourseViewModel.h */,
@@ -339,6 +390,9 @@
 		C580CE191E75533B00980375 /* Moodle */ = {
 			isa = PBXGroup;
 			children = (
+				C5FBF5AA1E7FC72E00CDE642 /* Notification */,
+				C5FBF5A91E7FC72900CDE642 /* Forum */,
+				C5FBF5A81E7FC71E00CDE642 /* Assignment */,
 				C580CE1F1E7553B800980375 /* MMMoodleViewController.h */,
 				C580CE201E7553B800980375 /* MMMoodleViewController.m */,
 				C580CE1A1E75536A00980375 /* MMMoodleViewController.xib */,
@@ -397,7 +451,6 @@
 		C59062C21E0430E0007CBC3E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C56613DF1E7E691900E252EC /* ComboBox */,
 				C580CE261E75550D00980375 /* Me */,
 				C580CE251E7554FF00980375 /* Archive */,
 				C580CE241E75544900980375 /* Forum */,
@@ -480,6 +533,65 @@
 				C56613E41E7E80FC00E252EC /* CourseVO.m */,
 			);
 			name = VO;
+			sourceTree = "<group>";
+		};
+		C5FBF5A81E7FC71E00CDE642 /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				C5FBF5AB1E7FC7CC00CDE642 /* MMAssignmentViewController.h */,
+				C5FBF5AC1E7FC7CC00CDE642 /* MMAssignmentViewController.m */,
+				C5FBF5AE1E7FC80800CDE642 /* MMAssignmentViewController.xib */,
+			);
+			name = Assignment;
+			sourceTree = "<group>";
+		};
+		C5FBF5A91E7FC72900CDE642 /* Forum */ = {
+			isa = PBXGroup;
+			children = (
+				C5FBF5B51E7FC8B300CDE642 /* MMForumViewController.h */,
+				C5FBF5B61E7FC8B300CDE642 /* MMForumViewController.m */,
+				C5FBF5B81E7FC8C400CDE642 /* MMForumViewController.xib */,
+			);
+			name = Forum;
+			sourceTree = "<group>";
+		};
+		C5FBF5AA1E7FC72E00CDE642 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				C5FBF5B01E7FC87D00CDE642 /* MMNotificationViewController.h */,
+				C5FBF5B11E7FC87D00CDE642 /* MMNotificationViewController.m */,
+				C5FBF5B31E7FC89700CDE642 /* MMNotificationViewController.xib */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
+		C5FBF5C61E7FEB9A00CDE642 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C5FBF5D11E80048F00CDE642 /* ComboBox */,
+				C5FBF5C71E7FEB9A00CDE642 /* JWTaggedScrollViewController */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C5FBF5C71E7FEB9A00CDE642 /* JWTaggedScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C5FBF5C81E7FEB9A00CDE642 /* JWTaggedPageViewController.h */,
+				C5FBF5C91E7FEB9A00CDE642 /* JWTaggedPageViewController.m */,
+				C5FBF5CC1E7FEB9A00CDE642 /* JWTaggedScrollView.h */,
+				C5FBF5CD1E7FEB9A00CDE642 /* JWTaggedScrollView.m */,
+			);
+			path = JWTaggedScrollViewController;
+			sourceTree = "<group>";
+		};
+		C5FBF5D11E80048F00CDE642 /* ComboBox */ = {
+			isa = PBXGroup;
+			children = (
+				C5FBF5D21E80048F00CDE642 /* JWComboBox.h */,
+				C5FBF5D31E80048F00CDE642 /* JWComboBox.m */,
+			);
+			path = ComboBox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -603,10 +715,13 @@
 			files = (
 				C580CE2B1E75607300980375 /* MMArchiveViewController.xib in Resources */,
 				C580CE051E7541C200980375 /* SigninViewController.xib in Resources */,
+				C5FBF5B41E7FC89700CDE642 /* MMNotificationViewController.xib in Resources */,
 				C580CE301E7560A300980375 /* MMMeViewController.xib in Resources */,
+				C5FBF5B91E7FC8C400CDE642 /* MMForumViewController.xib in Resources */,
 				C53B67B61E0424C800E71274 /* LaunchScreen.storyboard in Resources */,
 				C53B67B31E0424C800E71274 /* Assets.xcassets in Resources */,
 				C580CE1B1E75536A00980375 /* MMMoodleViewController.xib in Resources */,
+				C5FBF5AF1E7FC80800CDE642 /* MMAssignmentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,20 +884,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5FBF5CE1E7FEB9A00CDE642 /* JWTaggedPageViewController.m in Sources */,
 				C59063261E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift in Sources */,
 				C580CDFB1E751A7300980375 /* MMViewModel.m in Sources */,
+				C5FBF5A41E7F9F3100CDE642 /* MMForumViewModel.m in Sources */,
 				C580CE211E7553B800980375 /* MMMoodleViewController.m in Sources */,
 				C580CE101E7543C600980375 /* MMArchiveViewModel.m in Sources */,
+				C5FBF5D41E80048F00CDE642 /* JWComboBox.m in Sources */,
+				C5FBF5A71E7F9F4A00CDE642 /* MMAssignmentViewModel.m in Sources */,
 				C53B67B11E0424C800E71274 /* MMMobileMoodle.xcdatamodeld in Sources */,
 				C59063121E044200007CBC3E /* MMNetworkManager.m in Sources */,
 				C59062F91E04311C007CBC3E /* RequestParameter.m in Sources */,
 				C580CE141E7543E000980375 /* MMMeViewModel.m in Sources */,
-				C56613E21E7E691900E252EC /* JWComboBox.m in Sources */,
+				C5FBF5B71E7FC8B300CDE642 /* MMForumViewController.m in Sources */,
+				C5FBF5AD1E7FC7CC00CDE642 /* MMAssignmentViewController.m in Sources */,
 				C59062F71E04311C007CBC3E /* JWHTTPSessionManager.m in Sources */,
 				C59063201E045519007CBC3E /* UserVO.m in Sources */,
 				C56613E51E7E80FC00E252EC /* CourseVO.m in Sources */,
 				C53B67A81E0424C800E71274 /* AppDelegate.m in Sources */,
 				C580CE291E75605A00980375 /* MMArchiveViewController.m in Sources */,
+				C5FBF5D01E7FEB9A00CDE642 /* JWTaggedScrollView.m in Sources */,
+				C5FBF5B21E7FC87D00CDE642 /* MMNotificationViewController.m in Sources */,
 				C59062EA1E04311C007CBC3E /* DatabaseManager.m in Sources */,
 				C580CE021E753F4000980375 /* MMViewModelServiceImpl.m in Sources */,
 				C59062F81E04311C007CBC3E /* NetworkFile.m in Sources */,
@@ -794,6 +916,7 @@
 				C580CE0C1E75436E00980375 /* MMSigninViewModel.m in Sources */,
 				C590630A1E043B66007CBC3E /* AccountInfo.m in Sources */,
 				C56613E81E7E840F00E252EC /* MMCourseViewModel.m in Sources */,
+				C56613EE1E7EA58D00E252EC /* MMNotificationViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

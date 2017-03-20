@@ -13,6 +13,9 @@
 
 @interface MMMoodleViewModel()
 @property (nonatomic, strong, readwrite) NSArray *courses;
+@property (nonatomic, strong, readwrite) MMNotificationViewModel *notificationViewModel;
+@property (nonatomic, strong, readwrite) MMAssignmentViewModel *assignmentViewModel;
+@property (nonatomic, strong, readwrite) MMForumViewModel *forumViewModel;
 @end
 
 @implementation MMMoodleViewModel
@@ -22,6 +25,10 @@
                                            selector:@selector(didSignin:)
                                                name:kSigninNotificationName
                                              object:nil];
+  
+  self.notificationViewModel = [[MMNotificationViewModel alloc] init];
+  self.assignmentViewModel = [[MMAssignmentViewModel alloc] init];
+  self.forumViewModel = [[MMForumViewModel alloc] init];
 }
 
 - (void)didSignin:(NSNotification *)notification
@@ -46,5 +53,12 @@
 - (void)dealloc
 {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)setSelectedCourse:(NSUInteger)selectedCourse
+{
+  self.notificationViewModel.course = self.courses[selectedCourse].course;
+  self.forumViewModel.course = self.courses[selectedCourse].course;
+  self.assignmentViewModel.course = self.courses[selectedCourse].course;
 }
 @end

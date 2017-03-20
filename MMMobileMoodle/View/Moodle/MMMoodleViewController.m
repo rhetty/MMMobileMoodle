@@ -7,18 +7,21 @@
 //
 
 #import "MMMoodleViewController.h"
-#import "JWTaggedScrollView.h"
 #import "MMMobileMoodle-Bridging-Header.h"
 #import "AccountInfo.h"
 #import "SigninViewController.h"
 #import "MMMoodleViewModel.h"
 #import "JWComboBox.h"
+#import "MMAssignmentViewController.h"
+#import "MMNotificationViewController.h"
+#import "MMForumViewController.h"
+#import "JWTaggedPageViewController.h"
 
-@interface MMMoodleViewController ()<JWTaggedScrollViewDataSource, JWTaggedScrollViewDelegate, JWComboBoxDataSource, JWComboBoxDelegate>
-@property (weak, nonatomic) IBOutlet JWTaggedScrollView *taggedScrollView;
+@interface MMMoodleViewController ()<JWComboBoxDataSource, JWComboBoxDelegate>
 
 @property (nonatomic, strong) MMMoodleViewModel *viewModel;
 @property (nonatomic, weak) JWComboBox *courseSelectView;
+
 @end
 
 @implementation MMMoodleViewController
@@ -26,8 +29,6 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view.
-  self.taggedScrollView.dataSource = self;
-  self.taggedScrollView.delegate = self;
   
   self.automaticallyAdjustsScrollViewInsets = NO;
   
@@ -43,65 +44,27 @@
   [RACObserve(self.viewModel, courses) subscribeNext:^(id x) {
     [self.courseSelectView reloadData];
   }];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-  [super viewDidAppear:animated];
-
+  
+  // set contents
+  MMAssignmentViewController *assignmentVC = [[MMAssignmentViewController alloc] initWithViewModel:self.viewModel.assignmentViewModel];
+  MMNotificationViewController *notificationVC = [[MMNotificationViewController alloc] initWithViewModel:self.viewModel.notificationViewModel];
+  MMForumViewController *forumVC = [[MMForumViewController alloc] initWithViewModel:self.viewModel.forumViewModel];
+  
+  JWTaggedPageViewController *taggedPageVC = [[JWTaggedPageViewController alloc] init];
+  [taggedPageVC addChildViewController:assignmentVC title:NSLocalizedString(@"Assignment", nil)];
+  [taggedPageVC addChildViewController:notificationVC title:NSLocalizedString(@"Notification", nil)];
+  [taggedPageVC addChildViewController:forumVC title:NSLocalizedString(@"Forum", nil)];
+  taggedPageVC.tagHeight = 36.0f;
+  [self addChildViewController:taggedPageVC];
+  [taggedPageVC didMoveToParentViewController:self];
+  taggedPageVC.view.frame = CGRectMake(0, UI_STATUS_BAR_HEIGHT + UI_NAVIGATION_BAR_HEIGHT, self.view.frame.size.width, self.view.frame.size.height - UI_STATUS_BAR_HEIGHT - UI_NAVIGATION_BAR_HEIGHT - UI_TAB_BAR_HEIGHT);
+  taggedPageVC.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+  [self.view addSubview:taggedPageVC.view];
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - JWTaggedScrollViewDataSource
-
-- (NSInteger)numberOfTags
-{
-  return 3;
-}
-
-- (NSString *)textForTag:(NSUInteger)index
-{
-  switch (index) {
-    case 0:
-      return NSLocalizedString(@"Assignment", nil);
-    case 1:
-      return NSLocalizedString(@"Notification", nil);
-    case 2:
-      return NSLocalizedString(@"Forum", nil);
-    default:
-      return EMPTY_STRING;
-  }
-}
-
-- (UIView *)viewForTag:(NSUInteger)index
-{
-  UIView *view = [[UIView alloc] init];
-  switch (index) {
-    case 0:
-      view.backgroundColor = [UIColor redColor];
-      break;
-    case 1:
-      view.backgroundColor = [UIColor greenColor];
-      break;
-    case 2:
-      view.backgroundColor = [UIColor blueColor];
-      break;
-      
-    default:
-      break;
-  }
-  return view;
-}
-
-#pragma mark - JWTaggedScrollViewDelegate
-
-- (void)didSelectTag:(NSUInteger)index
-{
-  
 }
 
 #pragma mark - JWComboBoxDataSource
@@ -120,7 +83,7 @@
 
 - (void)comboBox:(JWComboBox *)comboBox didSelectAt:(NSUInteger)index
 {
-  debugLog(@"%li", index);
+  self.viewModel.selectedCourse = index;
 }
 
 @end

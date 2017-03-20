@@ -10,7 +10,7 @@
 #import "CourseVO.h"
 
 @interface MMCourseViewModel()
-@property (nonatomic, strong) CourseVO *course;
+@property (nonatomic, strong, readwrite) CourseVO *course;
 @end
 
 @implementation MMCourseViewModel
