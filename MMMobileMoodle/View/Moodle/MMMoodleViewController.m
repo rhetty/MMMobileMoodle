@@ -7,7 +7,6 @@
 //
 
 #import "MMMoodleViewController.h"
-#import "MMMobileMoodle-Bridging-Header.h"
 #import "AccountInfo.h"
 #import "SigninViewController.h"
 #import "MMMoodleViewModel.h"

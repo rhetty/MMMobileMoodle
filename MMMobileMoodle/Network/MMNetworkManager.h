@@ -18,4 +18,7 @@
 + (instancetype)sharedInstance;
 - (RACSignal *)signin:(NSString *)username password:(NSString *)password;
 - (RACSignal *)userCourses:(NSString *)userid;
+- (RACSignal *)courseContent:(NSString *)courseid;
+- (RACSignal *)assignments;
+- (RACSignal *)discussions:(NSString *)forumid;
 @end

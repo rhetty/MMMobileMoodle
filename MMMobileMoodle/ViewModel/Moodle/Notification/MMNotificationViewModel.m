@@ -14,4 +14,9 @@
 
 @implementation MMNotificationViewModel
 
+- (void)initialize
+{
+
+}
+
 @end

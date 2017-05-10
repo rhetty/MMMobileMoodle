@@ -17,7 +17,6 @@ PODS:
   - JSONModel (1.7.0)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
-  - Popover (1.0.1)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -32,7 +31,6 @@ DEPENDENCIES:
   - JSONModel (~> 1.7.0)
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh (~> 3.1.12)
-  - Popover
   - ReactiveCocoa (~> 2.5)
   - Toast (~> 3.0)
 
@@ -41,10 +39,9 @@ SPEC CHECKSUMS:
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  Popover: 90c76e430242891c184b71bd4343438cbaa6b2ba
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
 
-PODFILE CHECKSUM: 9a3bb11f7699fe2f6d4e327b9a5c90268ed7d53a
+PODFILE CHECKSUM: aa0181a2647473f53893e714439598916d0ccc69
 
 COCOAPODS: 1.2.0.beta.1

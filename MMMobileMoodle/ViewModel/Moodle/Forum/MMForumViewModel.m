@@ -14,4 +14,9 @@
 
 @implementation MMForumViewModel
 
+- (void)initialize
+{
+  
+}
+
 @end

@@ -9,7 +9,10 @@
 #import "MMViewModel.h"
 
 @class CourseVO;
+@class MMAssignmentItemViewModel;
 
 @interface MMAssignmentViewModel : MMViewModel
 @property (nonatomic, strong) CourseVO *course;
+@property (nonatomic, copy) NSArray<MMAssignmentItemViewModel *> *assignments;
+@property (nonatomic, strong, readonly) RACCommand *refreshCommand;
 @end

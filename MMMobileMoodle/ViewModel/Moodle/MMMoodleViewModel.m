@@ -28,9 +28,9 @@
   
   self.courses = @[[MMCourseViewModel defaultCourseViewModel]];
   
-  self.notificationViewModel = [[MMNotificationViewModel alloc] init];
-  self.assignmentViewModel = [[MMAssignmentViewModel alloc] init];
-  self.forumViewModel = [[MMForumViewModel alloc] init];
+  self.notificationViewModel = [[MMNotificationViewModel alloc] initWithService:nil];
+  self.assignmentViewModel = [[MMAssignmentViewModel alloc] initWithService:nil];
+  self.forumViewModel = [[MMForumViewModel alloc] initWithService:nil];
 }
 
 - (void)didSignin:(NSNotification *)notification

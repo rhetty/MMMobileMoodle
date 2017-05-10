@@ -41,8 +41,10 @@
 		C590630A1E043B66007CBC3E /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C59063091E043B66007CBC3E /* AccountInfo.m */; };
 		C59063121E044200007CBC3E /* MMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C59063111E044200007CBC3E /* MMNetworkManager.m */; };
 		C59063201E045519007CBC3E /* UserVO.m in Sources */ = {isa = PBXBuildFile; fileRef = C590631F1E045519007CBC3E /* UserVO.m */; };
-		C59063261E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59063251E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift */; };
-		C59951AF1EC304D700747C81 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C59951AE1EC304D700747C81 /* ArrayDataSource.m */; };
+		C59951B21EC30B6900747C81 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C59951B11EC30B6900747C81 /* ArrayDataSource.m */; };
+		C59951B51EC311A200747C81 /* MMAssignmentItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C59951B41EC311A200747C81 /* MMAssignmentItemViewModel.m */; };
+		C59951B81EC33FA600747C81 /* AssignmentVO.m in Sources */ = {isa = PBXBuildFile; fileRef = C59951B71EC33FA600747C81 /* AssignmentVO.m */; };
+		C59951BB1EC3413800747C81 /* IntroAttachmentVO.m in Sources */ = {isa = PBXBuildFile; fileRef = C59951BA1EC3413800747C81 /* IntroAttachmentVO.m */; };
 		C5FBF5A41E7F9F3100CDE642 /* MMForumViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5A31E7F9F3100CDE642 /* MMForumViewModel.m */; };
 		C5FBF5A71E7F9F4A00CDE642 /* MMAssignmentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5A61E7F9F4A00CDE642 /* MMAssignmentViewModel.m */; };
 		C5FBF5AD1E7FC7CC00CDE642 /* MMAssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5AC1E7FC7CC00CDE642 /* MMAssignmentViewController.m */; };
@@ -146,10 +148,14 @@
 		C59063131E044213007CBC3E /* MMNetworkConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNetworkConstants.h; sourceTree = "<group>"; };
 		C590631E1E045519007CBC3E /* UserVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserVO.h; path = VO/UserVO.h; sourceTree = "<group>"; };
 		C590631F1E045519007CBC3E /* UserVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserVO.m; path = VO/UserVO.m; sourceTree = "<group>"; };
-		C59063241E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMMobileMoodle-Bridging-Header.h"; sourceTree = "<group>"; };
-		C59063251E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MMMobileMoodle-Bridging-Header.swift"; sourceTree = "<group>"; };
-		C59951AD1EC304D700747C81 /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArrayDataSource.h; path = View/ArrayDataSource.h; sourceTree = "<group>"; };
-		C59951AE1EC304D700747C81 /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArrayDataSource.m; path = View/ArrayDataSource.m; sourceTree = "<group>"; };
+		C59951B01EC30B6900747C81 /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
+		C59951B11EC30B6900747C81 /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
+		C59951B31EC311A200747C81 /* MMAssignmentItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMAssignmentItemViewModel.h; path = ViewModel/Moodle/Assignment/MMAssignmentItemViewModel.h; sourceTree = "<group>"; };
+		C59951B41EC311A200747C81 /* MMAssignmentItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMAssignmentItemViewModel.m; path = ViewModel/Moodle/Assignment/MMAssignmentItemViewModel.m; sourceTree = "<group>"; };
+		C59951B61EC33FA600747C81 /* AssignmentVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssignmentVO.h; path = VO/AssignmentVO.h; sourceTree = "<group>"; };
+		C59951B71EC33FA600747C81 /* AssignmentVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssignmentVO.m; path = VO/AssignmentVO.m; sourceTree = "<group>"; };
+		C59951B91EC3413800747C81 /* IntroAttachmentVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroAttachmentVO.h; path = VO/IntroAttachmentVO.h; sourceTree = "<group>"; };
+		C59951BA1EC3413800747C81 /* IntroAttachmentVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroAttachmentVO.m; path = VO/IntroAttachmentVO.m; sourceTree = "<group>"; };
 		C5FBF5A21E7F9F3100CDE642 /* MMForumViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMForumViewModel.h; path = ViewModel/Moodle/Forum/MMForumViewModel.h; sourceTree = "<group>"; };
 		C5FBF5A31E7F9F3100CDE642 /* MMForumViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMForumViewModel.m; path = ViewModel/Moodle/Forum/MMForumViewModel.m; sourceTree = "<group>"; };
 		C5FBF5A51E7F9F4A00CDE642 /* MMAssignmentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMAssignmentViewModel.h; path = ViewModel/Moodle/Assignment/MMAssignmentViewModel.h; sourceTree = "<group>"; };
@@ -264,8 +270,6 @@
 				C59062C21E0430E0007CBC3E /* View */,
 				C59062C11E0430D9007CBC3E /* Model */,
 				C53B67A31E0424C800E71274 /* Supporting Files */,
-				C59063251E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift */,
-				C59063241E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.h */,
 			);
 			path = MMMobileMoodle;
 			sourceTree = "<group>";
@@ -301,6 +305,8 @@
 			children = (
 				C5FBF5A51E7F9F4A00CDE642 /* MMAssignmentViewModel.h */,
 				C5FBF5A61E7F9F4A00CDE642 /* MMAssignmentViewModel.m */,
+				C59951B31EC311A200747C81 /* MMAssignmentItemViewModel.h */,
+				C59951B41EC311A200747C81 /* MMAssignmentItemViewModel.m */,
 			);
 			name = Assignment;
 			sourceTree = "<group>";
@@ -403,27 +409,6 @@
 			name = Moodle;
 			sourceTree = "<group>";
 		};
-		C580CE221E75543D00980375 /* Assignment */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Assignment;
-			sourceTree = "<group>";
-		};
-		C580CE231E75544300980375 /* Notification */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Notification;
-			sourceTree = "<group>";
-		};
-		C580CE241E75544900980375 /* Forum */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Forum;
-			sourceTree = "<group>";
-		};
 		C580CE251E7554FF00980375 /* Archive */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,16 +441,11 @@
 			children = (
 				C580CE261E75550D00980375 /* Me */,
 				C580CE251E7554FF00980375 /* Archive */,
-				C580CE241E75544900980375 /* Forum */,
-				C580CE231E75544300980375 /* Notification */,
-				C580CE221E75543D00980375 /* Assignment */,
 				C580CE191E75533B00980375 /* Moodle */,
 				C580CE031E75418A00980375 /* Signin */,
 				C580CE1C1E7553A100980375 /* MMBaseViewController.h */,
 				C580CE1D1E7553A100980375 /* MMBaseViewController.m */,
 				C53B67B41E0424C800E71274 /* LaunchScreen.storyboard */,
-				C59951AD1EC304D700747C81 /* ArrayDataSource.h */,
-				C59951AE1EC304D700747C81 /* ArrayDataSource.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -482,6 +462,8 @@
 		C59062C41E04311C007CBC3E /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C59951B01EC30B6900747C81 /* ArrayDataSource.h */,
+				C59951B11EC30B6900747C81 /* ArrayDataSource.m */,
 				C59062E11E04311C007CBC3E /* MacroUtils.h */,
 				C59062C51E04311C007CBC3E /* Database */,
 				C59062E21E04311C007CBC3E /* Network */,
@@ -536,6 +518,10 @@
 				C590631F1E045519007CBC3E /* UserVO.m */,
 				C56613E31E7E80FC00E252EC /* CourseVO.h */,
 				C56613E41E7E80FC00E252EC /* CourseVO.m */,
+				C59951B61EC33FA600747C81 /* AssignmentVO.h */,
+				C59951B71EC33FA600747C81 /* AssignmentVO.m */,
+				C59951B91EC3413800747C81 /* IntroAttachmentVO.h */,
+				C59951BA1EC3413800747C81 /* IntroAttachmentVO.m */,
 			);
 			name = VO;
 			sourceTree = "<group>";
@@ -889,11 +875,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59951B81EC33FA600747C81 /* AssignmentVO.m in Sources */,
 				C5FBF5CE1E7FEB9A00CDE642 /* JWTaggedPageViewController.m in Sources */,
-				C59063261E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift in Sources */,
 				C580CDFB1E751A7300980375 /* MMViewModel.m in Sources */,
 				C5FBF5A41E7F9F3100CDE642 /* MMForumViewModel.m in Sources */,
-				C59951AF1EC304D700747C81 /* ArrayDataSource.m in Sources */,
+				C59951B21EC30B6900747C81 /* ArrayDataSource.m in Sources */,
 				C580CE211E7553B800980375 /* MMMoodleViewController.m in Sources */,
 				C580CE101E7543C600980375 /* MMArchiveViewModel.m in Sources */,
 				C5FBF5D41E80048F00CDE642 /* JWComboBox.m in Sources */,
@@ -912,6 +898,7 @@
 				C5FBF5D01E7FEB9A00CDE642 /* JWTaggedScrollView.m in Sources */,
 				C5FBF5B21E7FC87D00CDE642 /* MMNotificationViewController.m in Sources */,
 				C59062EA1E04311C007CBC3E /* DatabaseManager.m in Sources */,
+				C59951B51EC311A200747C81 /* MMAssignmentItemViewModel.m in Sources */,
 				C580CE021E753F4000980375 /* MMViewModelServiceImpl.m in Sources */,
 				C59062F81E04311C007CBC3E /* NetworkFile.m in Sources */,
 				C580CE2E1E75609200980375 /* MMMeViewController.m in Sources */,
@@ -920,6 +907,7 @@
 				C580CE181E75443500980375 /* MMMoodleViewModel.m in Sources */,
 				C580CE081E7541FA00980375 /* SigninViewController.m in Sources */,
 				C580CE0C1E75436E00980375 /* MMSigninViewModel.m in Sources */,
+				C59951BB1EC3413800747C81 /* IntroAttachmentVO.m in Sources */,
 				C590630A1E043B66007CBC3E /* AccountInfo.m in Sources */,
 				C56613E81E7E840F00E252EC /* MMCourseViewModel.m in Sources */,
 				C56613EE1E7EA58D00E252EC /* MMNotificationViewModel.m in Sources */,
@@ -1103,7 +1091,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2055FFCAD3DAD8130432453D /* Pods-MMMobileMoodleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
 				INFOPLIST_FILE = MMMobileMoodleTests/Info.plist;
@@ -1118,7 +1105,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47063E6BE477996728EE7E60 /* Pods-MMMobileMoodleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
 				INFOPLIST_FILE = MMMobileMoodleTests/Info.plist;
@@ -1133,7 +1119,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5046A3D7F145C87166D4C89E /* Pods-MMMobileMoodleUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
 				INFOPLIST_FILE = MMMobileMoodleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1147,7 +1132,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C2008A73190C3C3D12083BBF /* Pods-MMMobileMoodleUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JXJ9ZF6R76;
 				INFOPLIST_FILE = MMMobileMoodleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

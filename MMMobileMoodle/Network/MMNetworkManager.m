@@ -50,6 +50,7 @@
             map:^id(NSDictionary *response) {
               @strongify(self)
               self.token = [response objectForKey:@"token"];
+              debugLog(@"TOKEN: %@", self.token);
               return nil;
             }];
   }
