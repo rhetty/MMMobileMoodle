@@ -173,7 +173,7 @@ static NSString *const kCellIdentifier = @"Cell";
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
   cell.textLabel.text = [self.dataSource comboBox:self contentAt:indexPath.row];
-  cell.textLabel.font = [UIFont systemFontOfSize:12.0];
+  cell.textLabel.font = [UIFont systemFontOfSize:13.0];
   cell.textLabel.textAlignment = NSTextAlignmentCenter;
   cell.textLabel.textColor = indexPath.row == self.selectedIndex ? SELECTED_TEXT_COLOR : COMMON_TEXT_COLOR;
 }

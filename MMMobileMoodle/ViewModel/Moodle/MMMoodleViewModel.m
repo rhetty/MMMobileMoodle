@@ -26,6 +26,8 @@
                                                name:kSigninNotificationName
                                              object:nil];
   
+  self.courses = @[[MMCourseViewModel defaultCourseViewModel]];
+  
   self.notificationViewModel = [[MMNotificationViewModel alloc] init];
   self.assignmentViewModel = [[MMAssignmentViewModel alloc] init];
   self.forumViewModel = [[MMForumViewModel alloc] init];
@@ -35,7 +37,9 @@
 {
   [[[MMNetworkManager sharedInstance] userCourses:[AccountInfo sharedInstance].remoteID] subscribeNext:^(NSDictionary *response) {
     if (response) {
-      NSMutableArray *courseList = [NSMutableArray arrayWithCapacity:response.count];
+      NSMutableArray *courseList = [NSMutableArray arrayWithCapacity:response.count + 1];
+      [courseList addObject:[MMCourseViewModel defaultCourseViewModel]];
+      
       for (NSDictionary *dict in response) {
         NSError *error;
         CourseVO *cvo = [[CourseVO alloc] initWithDictionary:dict error:&error];

@@ -14,4 +14,5 @@
 @property (nonatomic, strong, readonly) NSString *displayContent;
 @property (nonatomic, strong, readonly) CourseVO *course;
 - (instancetype)initWithCourse:(CourseVO *)course;
++ (instancetype)defaultCourseViewModel;
 @end

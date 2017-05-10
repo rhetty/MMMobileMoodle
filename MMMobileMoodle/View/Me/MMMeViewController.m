@@ -9,8 +9,9 @@
 #import "MMMeViewController.h"
 #import "MMMeViewModel.h"
 
-@interface MMMeViewController ()
+@interface MMMeViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) MMMeViewModel *viewModel;
+@property (weak, nonatomic) IBOutlet UITableView *contentTableView;
 @end
 
 @implementation MMMeViewController
@@ -18,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  
+  
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,5 +37,41 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Properties
+
+static NSString *const cellIdentifier = @"Cell";
+
+- (void)setContentTableView:(UITableView *)contentTableView
+{
+  contentTableView.dataSource = self;
+  contentTableView.delegate = self;
+  [contentTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
+  _contentTableView = contentTableView;
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+  return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+  return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  return [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  cell.textLabel.text = NSLocalizedString(@"退出登录", nil);
+}
 
 @end

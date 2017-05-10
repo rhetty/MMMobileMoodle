@@ -23,6 +23,18 @@
   return self;
 }
 
++ (instancetype)defaultCourseViewModel
+{
+  static MMCourseViewModel *defaultCourseViewModel;
+  if (!defaultCourseViewModel) {
+    CourseVO *defaultCourse = [[CourseVO alloc] init];
+    defaultCourse.fullname = NSLocalizedString(@"All", nil);
+    defaultCourseViewModel = [[self alloc] initWithCourse:defaultCourse];
+  }
+
+  return defaultCourseViewModel;
+}
+
 - (NSString *)displayContent
 {
   return self.course.fullname;
