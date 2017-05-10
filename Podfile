@@ -10,6 +10,7 @@ pod 'Toast', '~> 3.0'
 pod 'JSONModel', '~> 1.7.0'
 pod 'Popover'
 pod 'ReactiveCocoa', '~> 2.5'
+pod 'MJRefresh', '~> 3.1.12'
 end
 
 target 'MMMobileMoodleTests' do

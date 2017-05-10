@@ -42,6 +42,7 @@
 		C59063121E044200007CBC3E /* MMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C59063111E044200007CBC3E /* MMNetworkManager.m */; };
 		C59063201E045519007CBC3E /* UserVO.m in Sources */ = {isa = PBXBuildFile; fileRef = C590631F1E045519007CBC3E /* UserVO.m */; };
 		C59063261E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59063251E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift */; };
+		C59951AF1EC304D700747C81 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C59951AE1EC304D700747C81 /* ArrayDataSource.m */; };
 		C5FBF5A41E7F9F3100CDE642 /* MMForumViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5A31E7F9F3100CDE642 /* MMForumViewModel.m */; };
 		C5FBF5A71E7F9F4A00CDE642 /* MMAssignmentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5A61E7F9F4A00CDE642 /* MMAssignmentViewModel.m */; };
 		C5FBF5AD1E7FC7CC00CDE642 /* MMAssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FBF5AC1E7FC7CC00CDE642 /* MMAssignmentViewController.m */; };
@@ -147,6 +148,8 @@
 		C590631F1E045519007CBC3E /* UserVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserVO.m; path = VO/UserVO.m; sourceTree = "<group>"; };
 		C59063241E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMMobileMoodle-Bridging-Header.h"; sourceTree = "<group>"; };
 		C59063251E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MMMobileMoodle-Bridging-Header.swift"; sourceTree = "<group>"; };
+		C59951AD1EC304D700747C81 /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArrayDataSource.h; path = View/ArrayDataSource.h; sourceTree = "<group>"; };
+		C59951AE1EC304D700747C81 /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArrayDataSource.m; path = View/ArrayDataSource.m; sourceTree = "<group>"; };
 		C5FBF5A21E7F9F3100CDE642 /* MMForumViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMForumViewModel.h; path = ViewModel/Moodle/Forum/MMForumViewModel.h; sourceTree = "<group>"; };
 		C5FBF5A31E7F9F3100CDE642 /* MMForumViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMForumViewModel.m; path = ViewModel/Moodle/Forum/MMForumViewModel.m; sourceTree = "<group>"; };
 		C5FBF5A51E7F9F4A00CDE642 /* MMAssignmentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMAssignmentViewModel.h; path = ViewModel/Moodle/Assignment/MMAssignmentViewModel.h; sourceTree = "<group>"; };
@@ -461,6 +464,8 @@
 				C580CE1C1E7553A100980375 /* MMBaseViewController.h */,
 				C580CE1D1E7553A100980375 /* MMBaseViewController.m */,
 				C53B67B41E0424C800E71274 /* LaunchScreen.storyboard */,
+				C59951AD1EC304D700747C81 /* ArrayDataSource.h */,
+				C59951AE1EC304D700747C81 /* ArrayDataSource.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -888,6 +893,7 @@
 				C59063261E04E74C007CBC3E /* MMMobileMoodle-Bridging-Header.swift in Sources */,
 				C580CDFB1E751A7300980375 /* MMViewModel.m in Sources */,
 				C5FBF5A41E7F9F3100CDE642 /* MMForumViewModel.m in Sources */,
+				C59951AF1EC304D700747C81 /* ArrayDataSource.m in Sources */,
 				C580CE211E7553B800980375 /* MMMoodleViewController.m in Sources */,
 				C580CE101E7543C600980375 /* MMArchiveViewModel.m in Sources */,
 				C5FBF5D41E80048F00CDE642 /* JWComboBox.m in Sources */,
