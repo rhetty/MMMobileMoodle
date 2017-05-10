@@ -92,4 +92,19 @@
   return [self invokeService:@"core_enrol_get_users_courses" data:@{@"userid": userid}];
 }
 
+- (RACSignal *)courseContent:(NSString *)courseid
+{
+  return [self invokeService:@"core_course_get_contents" data:@{@"courseid": courseid}];
+}
+
+- (RACSignal *)assignments
+{
+  return [self invokeService:@"mod_assign_get_assignments" data:nil];
+}
+
+- (RACSignal *)discussions:(NSString *)forumid
+{
+  return [self invokeService:@"mod_forum_get_forum_discussions_paginated" data:@{@"forumid": forumid}];
+}
+
 @end
